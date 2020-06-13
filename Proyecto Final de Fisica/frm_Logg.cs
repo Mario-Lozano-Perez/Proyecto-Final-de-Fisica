@@ -1,0 +1,134 @@
+﻿using Proyecto_Final_de_Fisica.DatabaseClass;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Proyecto_Final_de_Fisica.Frms;
+using fruslib;
+using Proyecto_Final_de_Fisica.Settings;
+using System.IO;
+using System.Data.SQLite;
+
+namespace Proyecto_Final_de_Fisica
+{
+    public partial class frm_Logg : Form
+    {
+        private UserSettings currentSettings;
+
+        public frm_Logg()
+        {
+            InitializeComponent();
+            ReadSettings();
+            CreateDatabase();
+        }
+
+
+        private void Btn_acces_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                string UserId = TextId.Value;
+                string UserPassword = TextPassword.Value;
+
+                User accesUser = new User(UserId);
+                if (accesUser.VerifyPassword(UserPassword))
+                {
+                    MainForm homeForm = new MainForm(accesUser, this);
+
+                    if (CheckRemember.IsSelected)
+                    {
+                        var userTem = new UserSettings(CheckRemember.IsSelected, TextId.Value, TextPassword.Value);
+                        userTem.Save();
+                    }
+                    else
+                    {
+                        var userTem = new UserSettings(false, "", "");
+                        userTem.Save();
+                    }
+
+                    homeForm.Show();
+                    this.Hide();
+
+                }
+                else
+                {
+                    TextPassword.IsWrong();
+                    //new MessageForm(2, "La contraseña no es correcta.");
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+                //new MessageForm(1, error.Message);
+                TextId.IsWrong();
+            }
+        }
+
+        private void Btn_close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void ReadSettings()
+        {
+            try
+            {
+                currentSettings = UserSettings.getFile();
+                if (currentSettings.Remember)
+                {
+                    TextId.Value = currentSettings.UserName;
+                    TextPassword.Value = currentSettings.Password;
+                    CheckRemember.IsSelected = currentSettings.Remember;
+                }
+            }
+            catch (Exception)
+            {
+                currentSettings = new UserSettings(false, "", "");
+                currentSettings.Save();
+                ReadSettings();
+            }
+        }
+
+        private void CreateDatabase()
+        {
+            if (!File.Exists("./database.db3"))
+            {
+                try
+                {
+                    //if (Directory.Exists(Application.StartupPath + "/videos")) Directory.Delete(Application.StartupPath + "/videos");
+
+                    SQLiteConnection.CreateFile("./database.db3");
+
+                    string QueryMax = MostUsed.ReadFile("./sql_build.sql");
+                    SqliteHelper.Ejecutar_CMD("./database.db3", Properties.Resources.SQL_BUILDER);
+
+                    var temporal = SqliteHelper.LlenarDataSet("./database.db3", "SELECT * FROM users").Tables[0];
+                    if (temporal.Rows.Count == 0)
+                    {
+                        User adminUser = new User();
+                        adminUser.Ci = "00000000000";
+                        adminUser.Name = "Admin";
+                        adminUser.Password = Cipher.CesarCifrar("admin", 5);
+                        adminUser.Level = 1;
+
+                        adminUser.Insert();
+
+                        MessageBox.Show(
+                            "Se ha creado el usuario administrador:\nCi: 00000000000\nContraseña: admin",
+                            "Usuario Administrador Creado",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Ha ocurrido un error mientras se cargaba la base de datos.");
+                }
+            }
+        }
+    }
+}

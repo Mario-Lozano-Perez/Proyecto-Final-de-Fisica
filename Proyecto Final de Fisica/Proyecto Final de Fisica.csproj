@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.3.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C710348B-5C6C-4E84-9A7B-A4DD1A6AED07}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Proyecto_Final_de_Fisica</RootNamespace>
+    <AssemblyName>Proyecto Final de Fisica</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>8F065D40A91A019B6D35093D0C2AF585008048E5</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Proyecto Final de Fisica_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=5.12.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.12.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="fruslib">
+      <HintPath>..\..\fruslib\bin\Debug\fruslib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\..\..\Recursos\Librerias C#\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config.cs" />
+    <Compile Include="DatabaseClass\Question.cs" />
+    <Compile Include="DatabaseClass\Questionaire.cs" />
+    <Compile Include="DatabaseClass\User.cs" />
+    <Compile Include="DatabaseClass\Video.cs" />
+    <Compile Include="Forms_Display\Questionaire\QuestionsMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Display\Questionaire\QuestionsMain.Designer.cs">
+      <DependentUpon>QuestionsMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Display\Questionaire\QuestionsStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Display\Questionaire\QuestionsStart.Designer.cs">
+      <DependentUpon>QuestionsStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Display\Questionaire\QuestionFinish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Display\Questionaire\QuestionFinish.Designer.cs">
+      <DependentUpon>QuestionFinish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Display\Questionaire\RankingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Display\Questionaire\RankingForm.Designer.cs">
+      <DependentUpon>RankingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Display\Questionaire\RankUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms_Display\Questionaire\RankUser.Designer.cs">
+      <DependentUpon>RankUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Display\Videos\FormViewVideos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Display\Videos\FormViewVideos.Designer.cs">
+      <DependentUpon>FormViewVideos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Display\Videos\Video Display.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms_Display\Videos\Video Display.Designer.cs">
+      <DependentUpon>Video Display.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frms\UsersAdmin\FormManageUserValues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frms\UsersAdmin\FormManageUserValues.Designer.cs">
+      <DependentUpon>FormManageUserValues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frms\QuestionAdmin\QuestionManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frms\QuestionAdmin\QuestionManageForm.Designer.cs">
+      <DependentUpon>QuestionManageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frms\QuestionAdmin\QuestionsListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frms\QuestionAdmin\QuestionsListForm.Designer.cs">
+      <DependentUpon>QuestionsListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frms\UsersAdmin\UserListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frms\UsersAdmin\UserListForm.Designer.cs">
+      <DependentUpon>UserListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frms\VideosAdmin\VideoManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frms\VideosAdmin\VideoManagement.Designer.cs">
+      <DependentUpon>VideoManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frms\VideosAdmin\VideosListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frms\VideosAdmin\VideosListForm.Designer.cs">
+      <DependentUpon>VideosListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_AdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_AdminDashboard.Designer.cs">
+      <DependentUpon>frm_AdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Logg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Logg.Designer.cs">
+      <DependentUpon>frm_Logg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageForm.Designer.cs">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FormUsserDashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUsserDashBoard.Designer.cs">
+      <DependentUpon>FormUsserDashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Settings.cs" />
+    <Compile Include="Settings\UserSettings.cs" />
+    <Compile Include="Settings\UserSettingsLoader.cs" />
+    <Compile Include="SqliteHelper.cs" />
+    <EmbeddedResource Include="Forms_Display\Questionaire\QuestionsMain.resx">
+      <DependentUpon>QuestionsMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Display\Questionaire\QuestionsStart.resx">
+      <DependentUpon>QuestionsStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Display\Questionaire\QuestionFinish.resx">
+      <DependentUpon>QuestionFinish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Display\Questionaire\RankingForm.resx">
+      <DependentUpon>RankingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Display\Questionaire\RankUser.resx">
+      <DependentUpon>RankUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Display\Videos\FormViewVideos.resx">
+      <DependentUpon>FormViewVideos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Display\Videos\Video Display.resx">
+      <DependentUpon>Video Display.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frms\UsersAdmin\FormManageUserValues.resx">
+      <DependentUpon>FormManageUserValues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frms\QuestionAdmin\QuestionManageForm.resx">
+      <DependentUpon>QuestionManageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frms\QuestionAdmin\QuestionsListForm.resx">
+      <DependentUpon>QuestionsListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frms\UsersAdmin\UserListForm.resx">
+      <DependentUpon>UserListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frms\VideosAdmin\VideoManagement.resx">
+      <DependentUpon>VideoManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frms\VideosAdmin\VideosListForm.resx">
+      <DependentUpon>VideosListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_AdminDashboard.resx">
+      <DependentUpon>frm_AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Logg.resx">
+      <DependentUpon>frm_Logg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageForm.resx">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUsserDashBoard.resx">
+      <DependentUpon>FormUsserDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Proyecto Final de Fisica_TemporaryKey.pfx" />
+    <None Include="Resources\Atom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\silver_play_arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\questions_cloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\joy_emojy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_cloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checked_cloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error_cloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning_cloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_female_circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_male_circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.3.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" />
+</Project>
