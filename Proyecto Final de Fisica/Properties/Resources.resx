@@ -200,5 +200,6 @@ FROM   [questionaire] AS [q]
 WHERE  [q].[user_id] = [u].[id]
 GROUP  BY [q].[user_id]
 ORDER  BY [points] DESC;</value>
+    <comment>String To Generate the database</comment>
   </data>
 </root>

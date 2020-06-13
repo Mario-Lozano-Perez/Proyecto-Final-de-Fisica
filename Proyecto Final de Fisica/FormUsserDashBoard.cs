@@ -62,6 +62,7 @@ namespace Proyecto_Final_de_Fisica
         private void ButtonRanking_Click(object sender, EventArgs e)
         {
             fatherForm.rankingForm.StartReading();
+
             MostUsed.OpenFormInPanel(fatherForm.rankingForm, fatherForm.pnl_FormContainer);
         }
     }

@@ -104,7 +104,7 @@ namespace Proyecto_Final_de_Fisica
 
                     SQLiteConnection.CreateFile("./database.db3");
 
-                    string QueryMax = MostUsed.ReadFile("./sql_build.sql");
+                    //string QueryMax = MostUsed.ReadFile(Properties.Resources.SQL_BUILDER);
                     SqliteHelper.Ejecutar_CMD("./database.db3", Properties.Resources.SQL_BUILDER);
 
                     var temporal = SqliteHelper.LlenarDataSet("./database.db3", "SELECT * FROM users").Tables[0];
