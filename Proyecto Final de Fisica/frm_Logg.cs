@@ -96,6 +96,10 @@ namespace Proyecto_Final_de_Fisica
 
         private void CreateDatabase()
         {
+            var databasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Proyecto Final de Fisica", "database.db3");
+
+            MessageBox.Show(databasePath);
+
             if (!File.Exists("./database.db3"))
             {
                 try

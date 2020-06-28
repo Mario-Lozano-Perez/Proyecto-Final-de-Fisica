@@ -147,29 +147,6 @@ namespace Proyecto_Final_de_Fisica.Properties {
         ///  [id] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE, 
         ///  [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string sql_build {
-            get {
-                return ResourceManager.GetString("sql_build", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to CREATE TABLE [users](
-        ///  [id] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE, 
-        ///  [ci] VARCHAR(20) NOT NULL UNIQUE, 
-        ///  [name] VARCHAR(255) NOT NULL, 
-        ///  [password] VARCHAR(255), 
-        ///  [level] INTEGER NOT NULL DEFAULT 0);
-        ///
-        ///CREATE TABLE [questionaire](
-        ///  [id] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE, 
-        ///  [user_id] INTEGER NOT NULL REFERENCES [users]([id]) ON DELETE CASCADE, 
-        ///  [points] INTEGER NOT NULL);
-        ///
-        ///CREATE TABLE [questions](
-        ///  [id] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE, 
-        ///  [rest of string was truncated]&quot;;.
-        /// </summary>
         internal static string SQL_BUILDER {
             get {
                 return ResourceManager.GetString("SQL_BUILDER", resourceCulture);
