@@ -2,8 +2,14 @@
 using Proyecto_Final_de_Fisica.Frms;
 using Proyecto_Final_de_Fisica.Frms.VideosAdmin;
 using System;
-using System.IO.Compression;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Proyecto_Final_de_Fisica
@@ -57,75 +63,6 @@ namespace Proyecto_Final_de_Fisica
         private void Btn_Videos_Click(object sender, EventArgs e)
         {
             MostUsed.OpenFormInPanel(videoListForm, this.fatherForm.pnl_FormContainer);
-        }
-
-        private void ButtonCreateBackup_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string FolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Proyecto Final de Fisica");
-
-                string TemporalDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "PFFTemporal");
-
-                SaveFileDialog SaveBackupDialog = new SaveFileDialog
-                {
-                    Title = "Selecciona un archivo de video",
-                    Filter = "Backup File|*.fbp",
-                };
-
-                //ZipFile.CreateFromDirectory("C:\\Preuea", "D:\\test.zip");
-
-                if (SaveBackupDialog.ShowDialog() == DialogResult.OK)
-                {
-                    if (Directory.Exists(TemporalDirectory)) Directory.Delete(TemporalDirectory, true);
-
-                    Directory.CreateDirectory(TemporalDirectory);
-
-                    foreach (string dirpath in Directory.GetDirectories(FolderPath, "*", SearchOption.AllDirectories))
-                        Directory.CreateDirectory(dirpath.Replace(FolderPath, TemporalDirectory));
-
-                    foreach (string newPath in Directory.GetFiles(FolderPath, "*.*", SearchOption.AllDirectories))
-                        File.Copy(newPath, newPath.Replace(FolderPath, TemporalDirectory));
-
-                    ZipFile.CreateFromDirectory(TemporalDirectory, SaveBackupDialog.FileName);
-
-                    Directory.Delete(TemporalDirectory, true);
-                }
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show("Error" + err.Message);
-            }
-        }
-
-        private void ButtonRestoreBackUp_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string FolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Proyecto Final de Fisica");
-
-                string TemporalDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "PFFTemporal");
-
-                OpenFileDialog loadFile = new OpenFileDialog
-                {
-                    Title = "Selecciona un archivo de video",
-                    Filter = "Backup File|*.fbp",
-                    Multiselect = false
-                };
-
-                if (loadFile.ShowDialog() == DialogResult.OK)
-                {
-                    if (Directory.Exists(FolderPath)) Directory.Delete(FolderPath, true);
-                    Directory.CreateDirectory(FolderPath);
-                    ZipFile.ExtractToDirectory(loadFile.FileName, FolderPath);
-                }
-
-            }
-            catch (Exception err)
-            {
-
-                MessageBox.Show(err.Message);
-            }
         }
     }
 }

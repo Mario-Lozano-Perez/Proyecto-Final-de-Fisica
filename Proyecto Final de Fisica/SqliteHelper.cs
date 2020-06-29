@@ -11,6 +11,7 @@ namespace Proyecto_Final_de_Fisica
     public static class SqliteHelper
     {
 
+        #region Llenar DataSet
         public static DataSet LlenarDataSet(string path, string CMD)
         {
 
@@ -21,12 +22,12 @@ namespace Proyecto_Final_de_Fisica
             Con.Open();
             SQLiteDataAdapter DP = new SQLiteDataAdapter(CMD, Con);
             DP.Fill(DS);
-            Con.Close();
-            Con.Dispose();
 
             return DS;
         }
+        #endregion
 
+        #region Ejecutar Querry
         public static void Ejecutar_CMD(string path, string CMD)
         {
             SQLiteConnection Con = new SQLiteConnection(@"Data Source = " + path +
@@ -36,8 +37,8 @@ namespace Proyecto_Final_de_Fisica
             Comando.CommandText = CMD;
             Comando.ExecuteNonQuery();
             Con.Close();
-            Con.Dispose();
 
         }
+        #endregion
     }
 }

@@ -38,8 +38,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.ButtonCreateBackup = new FontAwesome.Sharp.IconButton();
-            this.ButtonRestoreBackUp = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +55,7 @@
             this.btn_usersList.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(181)))), ((int)(((byte)(113)))));
             this.btn_usersList.IconSize = 50;
             this.btn_usersList.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_usersList.Location = new System.Drawing.Point(111, 40);
+            this.btn_usersList.Location = new System.Drawing.Point(111, 67);
             this.btn_usersList.Name = "btn_usersList";
             this.btn_usersList.Padding = new System.Windows.Forms.Padding(15);
             this.btn_usersList.Rotation = 0D;
@@ -82,7 +80,7 @@
             this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(185)))), ((int)(((byte)(172)))));
             this.iconButton1.IconSize = 50;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.iconButton1.Location = new System.Drawing.Point(329, 40);
+            this.iconButton1.Location = new System.Drawing.Point(329, 67);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Padding = new System.Windows.Forms.Padding(15);
             this.iconButton1.Rotation = 0D;
@@ -107,7 +105,7 @@
             this.btn_Videos.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(107)))), ((int)(((byte)(124)))));
             this.btn_Videos.IconSize = 50;
             this.btn_Videos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_Videos.Location = new System.Drawing.Point(553, 40);
+            this.btn_Videos.Location = new System.Drawing.Point(553, 67);
             this.btn_Videos.Name = "btn_Videos";
             this.btn_Videos.Padding = new System.Windows.Forms.Padding(15);
             this.btn_Videos.Rotation = 0D;
@@ -132,7 +130,7 @@
             this.btn_Reload.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(140)))), ((int)(((byte)(220)))));
             this.btn_Reload.IconSize = 50;
             this.btn_Reload.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_Reload.Location = new System.Drawing.Point(778, 40);
+            this.btn_Reload.Location = new System.Drawing.Point(778, 67);
             this.btn_Reload.Name = "btn_Reload";
             this.btn_Reload.Padding = new System.Windows.Forms.Padding(15);
             this.btn_Reload.Rotation = 0D;
@@ -152,7 +150,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(181)))), ((int)(((byte)(113)))));
-            this.panel1.Location = new System.Drawing.Point(111, 218);
+            this.panel1.Location = new System.Drawing.Point(111, 260);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(821, 268);
             this.panel1.TabIndex = 10;
@@ -214,64 +212,12 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Cantidad de Usuarios:";
             // 
-            // ButtonCreateBackup
-            // 
-            this.ButtonCreateBackup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.ButtonCreateBackup.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ButtonCreateBackup.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.ButtonCreateBackup.FlatAppearance.BorderSize = 0;
-            this.ButtonCreateBackup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonCreateBackup.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.ButtonCreateBackup.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonCreateBackup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(140)))), ((int)(((byte)(220)))));
-            this.ButtonCreateBackup.IconChar = FontAwesome.Sharp.IconChar.FeatherAlt;
-            this.ButtonCreateBackup.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(140)))), ((int)(((byte)(220)))));
-            this.ButtonCreateBackup.IconSize = 24;
-            this.ButtonCreateBackup.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.ButtonCreateBackup.Location = new System.Drawing.Point(111, 507);
-            this.ButtonCreateBackup.Name = "ButtonCreateBackup";
-            this.ButtonCreateBackup.Padding = new System.Windows.Forms.Padding(5);
-            this.ButtonCreateBackup.Rotation = 0D;
-            this.ButtonCreateBackup.Size = new System.Drawing.Size(180, 48);
-            this.ButtonCreateBackup.TabIndex = 11;
-            this.ButtonCreateBackup.Text = "Crear BackUp";
-            this.ButtonCreateBackup.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ButtonCreateBackup.UseVisualStyleBackColor = false;
-            this.ButtonCreateBackup.Click += new System.EventHandler(this.ButtonCreateBackup_Click);
-            // 
-            // ButtonRestoreBackUp
-            // 
-            this.ButtonRestoreBackUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.ButtonRestoreBackUp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ButtonRestoreBackUp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.ButtonRestoreBackUp.FlatAppearance.BorderSize = 0;
-            this.ButtonRestoreBackUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonRestoreBackUp.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.ButtonRestoreBackUp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonRestoreBackUp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(140)))), ((int)(((byte)(220)))));
-            this.ButtonRestoreBackUp.IconChar = FontAwesome.Sharp.IconChar.FeatherAlt;
-            this.ButtonRestoreBackUp.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(140)))), ((int)(((byte)(220)))));
-            this.ButtonRestoreBackUp.IconSize = 24;
-            this.ButtonRestoreBackUp.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.ButtonRestoreBackUp.Location = new System.Drawing.Point(313, 507);
-            this.ButtonRestoreBackUp.Name = "ButtonRestoreBackUp";
-            this.ButtonRestoreBackUp.Padding = new System.Windows.Forms.Padding(5);
-            this.ButtonRestoreBackUp.Rotation = 0D;
-            this.ButtonRestoreBackUp.Size = new System.Drawing.Size(221, 48);
-            this.ButtonRestoreBackUp.TabIndex = 12;
-            this.ButtonRestoreBackUp.Text = "Restaurar BackUp";
-            this.ButtonRestoreBackUp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ButtonRestoreBackUp.UseVisualStyleBackColor = false;
-            this.ButtonRestoreBackUp.Click += new System.EventHandler(this.ButtonRestoreBackUp_Click);
-            // 
             // frm_AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(34)))), ((int)(((byte)(39)))));
             this.ClientSize = new System.Drawing.Size(1042, 594);
-            this.Controls.Add(this.ButtonRestoreBackUp);
-            this.Controls.Add(this.ButtonCreateBackup);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_Reload);
             this.Controls.Add(this.btn_Videos);
@@ -298,7 +244,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbl_UserCount;
-        private FontAwesome.Sharp.IconButton ButtonCreateBackup;
-        private FontAwesome.Sharp.IconButton ButtonRestoreBackUp;
     }
 }

@@ -75,7 +75,7 @@ namespace Proyecto_Final_de_Fisica.DatabaseClass
         {
             try
             {
-                string query = "INSERT INTO users (ci,name,password,level) VALUES ('" + Ci + "','" + Name + "','" + Password + "','" + Level.ToString() + "')";
+                string query = "INSERT INTO users (ci,name,password,level) VALUES ('" + this.Ci + "','" + this.Name + "','" + this.Password + "','" + this.Level.ToString() + "')";
 
                 SqliteHelper.Ejecutar_CMD(databasePath, query);
             }
