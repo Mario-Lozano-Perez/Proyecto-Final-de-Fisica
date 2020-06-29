@@ -110,7 +110,7 @@ namespace Proyecto_Final_de_Fisica
                 {
                     //if (Directory.Exists(Application.StartupPath + "/videos")) Directory.Delete(Application.StartupPath + "/videos");
 
-                    SQLiteConnection.CreateFile(databasePath);
+                    //SQLiteConnection.CreateFile(databasePath);
 
                     //string QueryMax = MostUsed.ReadFile(Properties.Resources.SQL_BUILDER);
                     SqliteHelper.Ejecutar_CMD(databasePath, Properties.Resources.SQL_BUILDER);
@@ -118,11 +118,13 @@ namespace Proyecto_Final_de_Fisica
                     var temporal = SqliteHelper.LlenarDataSet(databasePath, "SELECT * FROM users").Tables[0];
                     if (temporal.Rows.Count == 0)
                     {
-                        User adminUser = new User();
-                        adminUser.Ci = "00000000000";
-                        adminUser.Name = "Admin";
-                        adminUser.Password = Cipher.CesarCifrar("admin", 5);
-                        adminUser.Level = 1;
+                        User adminUser = new User
+                        {
+                            Ci = "00000000000",
+                            Name = "Admin",
+                            Password = Cipher.CesarCifrar("admin", 5),
+                            Level = 1
+                        };
 
                         adminUser.Insert();
 
