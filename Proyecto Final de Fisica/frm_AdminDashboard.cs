@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +20,7 @@ namespace Proyecto_Final_de_Fisica
         QuestionsListForm questionsListForm;
         VideosListForm videoListForm;
 
-        private readonly string databasePath = "./database.db3";
+        private readonly string databasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Proyecto Final de Fisica", "database.db3");
         public MainForm fatherForm;
 
         public frm_AdminDashboard()
@@ -51,7 +52,7 @@ namespace Proyecto_Final_de_Fisica
 
         private void Btn_usersList_Click(object sender, EventArgs e)
         {
-            MostUsed.OpenFormInPanel(userListForm,this.fatherForm.pnl_FormContainer);
+            MostUsed.OpenFormInPanel(userListForm, this.fatherForm.pnl_FormContainer);
         }
 
         private void IconButton1_Click(object sender, EventArgs e)

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.drg_topBar = new fruslib.DragControl();
             this.lblTitle = new System.Windows.Forms.Label();
             this.ellipse1 = new fruslib.Ellipse();
@@ -50,13 +51,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnl_FormContainer = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.ButtonTrophy = new FontAwesome.Sharp.IconButton();
             this.btn_adminPanel = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.ButtonQuestionaire = new FontAwesome.Sharp.IconButton();
             this.ButtonVideos = new FontAwesome.Sharp.IconButton();
             this.btn_Home = new FontAwesome.Sharp.IconButton();
             this.dragControl2 = new fruslib.DragControl();
-            this.ButtonTrophy = new FontAwesome.Sharp.IconButton();
             this.pnl_topBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Context.SuspendLayout();
@@ -314,6 +315,27 @@
             this.panel2.Size = new System.Drawing.Size(55, 587);
             this.panel2.TabIndex = 5;
             // 
+            // ButtonTrophy
+            // 
+            this.ButtonTrophy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonTrophy.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ButtonTrophy.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(15)))), ((int)(((byte)(20)))));
+            this.ButtonTrophy.FlatAppearance.BorderSize = 0;
+            this.ButtonTrophy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(146)))), ((int)(((byte)(114)))));
+            this.ButtonTrophy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonTrophy.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.ButtonTrophy.IconChar = FontAwesome.Sharp.IconChar.Trophy;
+            this.ButtonTrophy.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ButtonTrophy.IconSize = 26;
+            this.ButtonTrophy.Location = new System.Drawing.Point(0, 203);
+            this.ButtonTrophy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 25);
+            this.ButtonTrophy.Name = "ButtonTrophy";
+            this.ButtonTrophy.Rotation = 0D;
+            this.ButtonTrophy.Size = new System.Drawing.Size(52, 50);
+            this.ButtonTrophy.TabIndex = 5;
+            this.ButtonTrophy.UseVisualStyleBackColor = true;
+            this.ButtonTrophy.Click += new System.EventHandler(this.ButtonTrophy_Click);
+            // 
             // btn_adminPanel
             // 
             this.btn_adminPanel.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -422,27 +444,6 @@
             // 
             this.dragControl2.SelectControl = this.pictureBox1;
             // 
-            // ButtonTrophy
-            // 
-            this.ButtonTrophy.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ButtonTrophy.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ButtonTrophy.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(15)))), ((int)(((byte)(20)))));
-            this.ButtonTrophy.FlatAppearance.BorderSize = 0;
-            this.ButtonTrophy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(146)))), ((int)(((byte)(114)))));
-            this.ButtonTrophy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonTrophy.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.ButtonTrophy.IconChar = FontAwesome.Sharp.IconChar.Trophy;
-            this.ButtonTrophy.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ButtonTrophy.IconSize = 26;
-            this.ButtonTrophy.Location = new System.Drawing.Point(0, 203);
-            this.ButtonTrophy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 25);
-            this.ButtonTrophy.Name = "ButtonTrophy";
-            this.ButtonTrophy.Rotation = 0D;
-            this.ButtonTrophy.Size = new System.Drawing.Size(52, 50);
-            this.ButtonTrophy.TabIndex = 5;
-            this.ButtonTrophy.UseVisualStyleBackColor = true;
-            this.ButtonTrophy.Click += new System.EventHandler(this.ButtonTrophy_Click);
-            // 
             // MainForm
             // 
             this.AcceptButton = this.btn_Home;
@@ -452,6 +453,7 @@
             this.ClientSize = new System.Drawing.Size(1097, 639);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
             this.Padding = new System.Windows.Forms.Padding(3);

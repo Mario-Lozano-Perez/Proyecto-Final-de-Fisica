@@ -2,12 +2,13 @@
 using System;
 using System.Windows.Forms;
 using Proyecto_Final_de_Fisica.DatabaseClass;
+using System.IO;
 
 namespace Proyecto_Final_de_Fisica.Frms
 {
     public partial class UserListForm : Form
     {
-        private readonly string databasePath = "./database.db3";
+        private readonly string databasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Proyecto Final de Fisica", "database.db3");
         private frm_AdminDashboard adminForm;
         private User UserToDelete;
 
@@ -27,8 +28,8 @@ namespace Proyecto_Final_de_Fisica.Frms
 
         public void ReadData()
         {
-            
-            var Datos = SqliteHelper.LlenarDataSet(databasePath, "SELECT id as \"ID\", ci as \"CI\", name as \"Nombre\", level as \"Nivel\" from users where name LIKE '%"+ txt_SearchFied.Text + "%' OR ci LIKE '%" + txt_SearchFied.Text + "%'").Tables[0];
+
+            var Datos = SqliteHelper.LlenarDataSet(databasePath, "SELECT id as \"ID\", ci as \"CI\", name as \"Nombre\", level as \"Nivel\" from users where name LIKE '%" + txt_SearchFied.Text + "%' OR ci LIKE '%" + txt_SearchFied.Text + "%'").Tables[0];
             dgv_List.DataSource = Datos;
 
         }
@@ -53,7 +54,7 @@ namespace Proyecto_Final_de_Fisica.Frms
         {
             var text = dgv_List.SelectedRows[0].Cells[1].Value.ToString();
             var User = new User(text);
-            FormManageUserValues frmUserToCreate = new FormManageUserValues(this,User);
+            FormManageUserValues frmUserToCreate = new FormManageUserValues(this, User);
             frmUserToCreate.Show();
         }
 

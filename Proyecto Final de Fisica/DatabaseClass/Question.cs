@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ namespace Proyecto_Final_de_Fisica.DatabaseClass
 {
     public class Question
     {
-        private static readonly string databasePath = "./database.db3";
+        private static readonly string databasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Proyecto Final de Fisica", "database.db3");
         public int ID { get; set; }
         public string Tittle { get; set; }
         public string QuestionText { get; set; }

@@ -23,8 +23,14 @@ namespace Proyecto_Final_de_Fisica
         public frm_Logg()
         {
             InitializeComponent();
+            var Folder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Proyecto Final de Fisica");
+            if (!Directory.Exists(Folder)) Directory.CreateDirectory(Folder);
+
             ReadSettings();
             CreateDatabase();
+
+
+
         }
 
 
@@ -98,20 +104,18 @@ namespace Proyecto_Final_de_Fisica
         {
             var databasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Proyecto Final de Fisica", "database.db3");
 
-            MessageBox.Show(databasePath);
-
-            if (!File.Exists("./database.db3"))
+            if (!File.Exists(databasePath))
             {
                 try
                 {
                     //if (Directory.Exists(Application.StartupPath + "/videos")) Directory.Delete(Application.StartupPath + "/videos");
 
-                    SQLiteConnection.CreateFile("./database.db3");
+                    SQLiteConnection.CreateFile(databasePath);
 
                     //string QueryMax = MostUsed.ReadFile(Properties.Resources.SQL_BUILDER);
-                    SqliteHelper.Ejecutar_CMD("./database.db3", Properties.Resources.SQL_BUILDER);
+                    SqliteHelper.Ejecutar_CMD(databasePath, Properties.Resources.SQL_BUILDER);
 
-                    var temporal = SqliteHelper.LlenarDataSet("./database.db3", "SELECT * FROM users").Tables[0];
+                    var temporal = SqliteHelper.LlenarDataSet(databasePath, "SELECT * FROM users").Tables[0];
                     if (temporal.Rows.Count == 0)
                     {
                         User adminUser = new User();
@@ -128,9 +132,9 @@ namespace Proyecto_Final_de_Fisica
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
-                catch (Exception)
+                catch (Exception err)
                 {
-                    MessageBox.Show("Ha ocurrido un error mientras se cargaba la base de datos.");
+                    MessageBox.Show("Ha ocurrido un error mientras se cargaba la base de datos.\n" + err.Message);
                 }
             }
         }

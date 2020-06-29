@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Logg));
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.pnl_Container = new System.Windows.Forms.Panel();
             this.btn_close = new FontAwesome.Sharp.IconButton();
@@ -250,6 +251,7 @@
             this.ClientSize = new System.Drawing.Size(308, 466);
             this.Controls.Add(this.pnl_Back);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frm_Logg";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

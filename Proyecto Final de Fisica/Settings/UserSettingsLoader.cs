@@ -13,7 +13,8 @@ namespace Proyecto_Final_de_Fisica.Settings
     {
         public static void SaveSettings(UserSettings settings)
         {
-            string path = Application.StartupPath + "/UserConfiguration.cfg";
+
+            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Proyecto Final de Fisica", "UserConfiguration.cfg");
 
             BinaryFormatter formatter = new BinaryFormatter();
 
@@ -25,10 +26,10 @@ namespace Proyecto_Final_de_Fisica.Settings
 
         public static UserSettings LoadSettings()
         {
-            string path = Application.StartupPath + "/UserConfiguration.cfg";
+            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Proyecto Final de Fisica", "UserConfiguration.cfg");
             FileStream stream = new FileStream(path, FileMode.Open);
 
-            if (File.Exists(path))  
+            if (File.Exists(path))
             {
                 BinaryFormatter formatter = new BinaryFormatter();
 

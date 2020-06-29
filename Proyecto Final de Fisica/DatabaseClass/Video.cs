@@ -11,8 +11,8 @@ namespace Proyecto_Final_de_Fisica.DatabaseClass
 {
     public class Video
     {
-        private static readonly string databasePath = "./database.db3";
-        private static readonly string VideosFolderPath = Application.StartupPath + "/videos";
+        private static readonly string databasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Proyecto Final de Fisica", "database.db3");
+        private static readonly string VideosFolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Proyecto Final de Fisica", "Videos");
         public int Id { get; set; }
         public String Tittle { get; set; }
         public String Url { get; set; }

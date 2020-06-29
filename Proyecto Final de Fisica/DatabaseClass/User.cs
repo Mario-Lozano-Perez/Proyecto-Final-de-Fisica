@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,7 @@ namespace Proyecto_Final_de_Fisica.DatabaseClass
 {
     public class User
     {
-        private readonly string databasePath = "./database.db3";
+        private readonly string databasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Proyecto Final de Fisica", "database.db3");
         public string Ci { get; set; }
         public int Id { get; set; }
         public string Name { get; set; }
@@ -76,7 +77,7 @@ namespace Proyecto_Final_de_Fisica.DatabaseClass
             {
                 string query = "INSERT INTO users (ci,name,password,level) VALUES ('" + this.Ci + "','" + this.Name + "','" + this.Password + "','" + this.Level.ToString() + "')";
 
-                SqliteHelper.Ejecutar_CMD("./database.db3", query);
+                SqliteHelper.Ejecutar_CMD(databasePath, query);
             }
             catch (Exception e)
             {
@@ -91,7 +92,7 @@ namespace Proyecto_Final_de_Fisica.DatabaseClass
             {
                 string query = "UPDATE users SET name = '" + Name + "', password = '" + Password + "', level = '" + Level.ToString() + "' WHERE ci = '" + Ci + "'";
 
-                SqliteHelper.Ejecutar_CMD("./database.db3", query);
+                SqliteHelper.Ejecutar_CMD(databasePath, query);
 
             }
             catch (Exception e)
@@ -116,7 +117,7 @@ namespace Proyecto_Final_de_Fisica.DatabaseClass
             {
                 string query = "DELETE FROM users WHERE ci = '" + Ci + "'";
 
-                SqliteHelper.Ejecutar_CMD("./database.db3", query);
+                SqliteHelper.Ejecutar_CMD(databasePath, query);
 
             }
             catch (Exception e)
