@@ -101,6 +101,15 @@ namespace Proyecto_Final_de_Fisica.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to https://github.com/Mario-Lozano-Perez/Proyecto-Final-de-Fisica.
+        /// </summary>
+        internal static string GitHubLink {
+            get {
+                return ResourceManager.GetString("GitHubLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap joy_emojy {

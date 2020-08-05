@@ -65,5 +65,11 @@ namespace Proyecto_Final_de_Fisica
 
             MostUsed.OpenFormInPanel(fatherForm.RANKING_FORM, fatherForm.pnl_FormContainer);
         }
+
+        private void IconButton6_Click(object sender, EventArgs e)
+        {
+            About ABOUT = new About();
+            ABOUT.Show();
+        }
     }
 }

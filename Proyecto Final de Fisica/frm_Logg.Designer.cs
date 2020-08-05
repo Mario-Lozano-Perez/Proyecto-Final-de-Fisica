@@ -42,6 +42,7 @@
             this.dragControl1 = new fruslib.DragControl();
             this.dragControl2 = new fruslib.DragControl();
             this.ellipse1 = new fruslib.Ellipse();
+            this.ButtonGithub = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.pnl_Container.SuspendLayout();
             this.pnl_Back.SuspendLayout();
@@ -54,7 +55,7 @@
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.User;
             this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(149)))), ((int)(((byte)(163)))));
             this.iconPictureBox1.IconSize = 98;
-            this.iconPictureBox1.Location = new System.Drawing.Point(101, 31);
+            this.iconPictureBox1.Location = new System.Drawing.Point(101, 37);
             this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.Size = new System.Drawing.Size(108, 98);
@@ -64,6 +65,7 @@
             // pnl_Container
             // 
             this.pnl_Container.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            this.pnl_Container.Controls.Add(this.ButtonGithub);
             this.pnl_Container.Controls.Add(this.btn_close);
             this.pnl_Container.Controls.Add(this.CheckRemember);
             this.pnl_Container.Controls.Add(this.TextPassword);
@@ -242,6 +244,28 @@
             this.ellipse1.CornerRadius = 0;
             this.ellipse1.TargetControl = this;
             // 
+            // ButtonGithub
+            // 
+            this.ButtonGithub.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonGithub.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            this.ButtonGithub.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonGithub.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.ButtonGithub.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonGithub.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.ButtonGithub.IconChar = FontAwesome.Sharp.IconChar.Github;
+            this.ButtonGithub.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.ButtonGithub.IconSize = 24;
+            this.ButtonGithub.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonGithub.Location = new System.Drawing.Point(11, 12);
+            this.ButtonGithub.Name = "ButtonGithub";
+            this.ButtonGithub.Rotation = 0D;
+            this.ButtonGithub.Size = new System.Drawing.Size(97, 28);
+            this.ButtonGithub.TabIndex = 18;
+            this.ButtonGithub.Text = "GitHub";
+            this.ButtonGithub.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ButtonGithub.UseVisualStyleBackColor = true;
+            this.ButtonGithub.Click += new System.EventHandler(this.ButtonGithub_Click);
+            // 
             // frm_Logg
             // 
             this.AcceptButton = this.btn_acces;
@@ -278,5 +302,6 @@
         private fruslib.KstomTextBox TextId;
         private fruslib.KstomChekBox CheckRemember;
         private FontAwesome.Sharp.IconButton btn_close;
+        private FontAwesome.Sharp.IconButton ButtonGithub;
     }
 }

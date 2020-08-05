@@ -96,6 +96,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
     <Compile Include="Config.cs" />
     <Compile Include="DatabaseClass\Document.cs" />
     <Compile Include="DatabaseClass\Question.cs" />
@@ -245,6 +251,9 @@
     <Compile Include="Settings\UserSettings.cs" />
     <Compile Include="Settings\UserSettingsLoader.cs" />
     <Compile Include="SqliteHelper.cs" />
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms_Display\Document\documentView.resx">
       <DependentUpon>documentView.cs</DependentUpon>
     </EmbeddedResource>

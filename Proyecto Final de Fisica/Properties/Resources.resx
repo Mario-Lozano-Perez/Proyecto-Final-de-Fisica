@@ -204,4 +204,7 @@ GROUP  BY [q].[user_id]
 ORDER  BY [points] DESC;</value>
     <comment>String To Generate the database</comment>
   </data>
+  <data name="GitHubLink" xml:space="preserve">
+    <value>https://github.com/Mario-Lozano-Perez/Proyecto-Final-de-Fisica</value>
+  </data>
 </root>
