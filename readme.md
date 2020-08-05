@@ -1,5 +1,7 @@
 # Proyecto Final de Física 2° año
 
+![](https://github.com/Mario-Lozano-Perez/Proyecto-Final-de-Fisica/blob/master/ProyectoFisicaSocialImage.png)
+
 ## Introducción
 
 Esta aplicación es mi proyecto final para la asignatura de Física en el segundo año de la carrera de **Ingeniería Informática** en la universidad **Lenin** de la provincia de **Las tunas** en Cuba.
