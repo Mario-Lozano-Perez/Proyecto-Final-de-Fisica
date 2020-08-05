@@ -1,6 +1,6 @@
-﻿namespace Proyecto_Final_de_Fisica.Frms.VideosAdmin
+﻿namespace Proyecto_Final_de_Fisica.Forms_Display.Document
 {
-    partial class VideoManagement
+    partial class FormDocumentCU
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VideoManagement));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.PanelFileChecked = new System.Windows.Forms.Panel();
             this.LabelProcces = new System.Windows.Forms.Label();
             this.btn_Register = new FontAwesome.Sharp.IconButton();
             this.btn_close = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
             this.KtextTittle = new fruslib.KstomTextBox();
-            this.dragControl1 = new fruslib.DragControl();
             this.dragControl2 = new fruslib.DragControl();
-            this.PanelFileChecked = new System.Windows.Forms.Panel();
+            this.dragControl1 = new fruslib.DragControl();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,17 +52,25 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.KtextTittle);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(5, 5);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(366, 234);
-            this.panel1.TabIndex = 0;
+            this.panel1.Size = new System.Drawing.Size(370, 238);
+            this.panel1.TabIndex = 1;
+            // 
+            // PanelFileChecked
+            // 
+            this.PanelFileChecked.BackColor = System.Drawing.Color.LightCoral;
+            this.PanelFileChecked.Location = new System.Drawing.Point(20, 125);
+            this.PanelFileChecked.Name = "PanelFileChecked";
+            this.PanelFileChecked.Size = new System.Drawing.Size(10, 10);
+            this.PanelFileChecked.TabIndex = 25;
             // 
             // LabelProcces
             // 
             this.LabelProcces.AutoSize = true;
             this.LabelProcces.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelProcces.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.LabelProcces.Location = new System.Drawing.Point(19, 186);
+            this.LabelProcces.Location = new System.Drawing.Point(21, 192);
             this.LabelProcces.Name = "LabelProcces";
             this.LabelProcces.Size = new System.Drawing.Size(99, 23);
             this.LabelProcces.TabIndex = 24;
@@ -83,7 +90,7 @@
             this.btn_Register.IconColor = System.Drawing.Color.White;
             this.btn_Register.IconSize = 24;
             this.btn_Register.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Register.Location = new System.Drawing.Point(203, 176);
+            this.btn_Register.Location = new System.Drawing.Point(205, 182);
             this.btn_Register.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Register.Name = "btn_Register";
             this.btn_Register.Padding = new System.Windows.Forms.Padding(11, 0, 11, 0);
@@ -107,7 +114,7 @@
             this.btn_close.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
             this.btn_close.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(149)))), ((int)(((byte)(163)))));
             this.btn_close.IconSize = 20;
-            this.btn_close.Location = new System.Drawing.Point(306, 12);
+            this.btn_close.Location = new System.Drawing.Point(308, 18);
             this.btn_close.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_close.Name = "btn_close";
             this.btn_close.Padding = new System.Windows.Forms.Padding(5);
@@ -130,7 +137,7 @@
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconSize = 24;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton1.Location = new System.Drawing.Point(15, 116);
+            this.iconButton1.Location = new System.Drawing.Point(17, 122);
             this.iconButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Padding = new System.Windows.Forms.Padding(11, 0, 11, 0);
@@ -147,16 +154,16 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(15, 17);
+            this.label2.Location = new System.Drawing.Point(17, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 23);
+            this.label2.Size = new System.Drawing.Size(174, 23);
             this.label2.TabIndex = 21;
-            this.label2.Text = "Titulo del video";
+            this.label2.Text = "Titulo del documento";
             // 
             // KtextTittle
             // 
             this.KtextTittle.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(29)))), ((int)(((byte)(32)))));
-            this.KtextTittle.Location = new System.Drawing.Point(15, 55);
+            this.KtextTittle.Location = new System.Drawing.Point(17, 61);
             this.KtextTittle.Name = "KtextTittle";
             this.KtextTittle.OverallPading = new System.Windows.Forms.Padding(3, 3, 3, 4);
             this.KtextTittle.Paragraph = false;
@@ -175,23 +182,15 @@
             this.KtextTittle.UseSystemPasswordChar = false;
             this.KtextTittle.Value = "";
             // 
-            // dragControl1
-            // 
-            this.dragControl1.SelectControl = this.panel1;
-            // 
             // dragControl2
             // 
-            this.dragControl2.SelectControl = this.label2;
+            this.dragControl2.SelectControl = this.panel1;
             // 
-            // PanelFileChecked
+            // dragControl1
             // 
-            this.PanelFileChecked.BackColor = System.Drawing.Color.LightCoral;
-            this.PanelFileChecked.Location = new System.Drawing.Point(19, 120);
-            this.PanelFileChecked.Name = "PanelFileChecked";
-            this.PanelFileChecked.Size = new System.Drawing.Size(10, 10);
-            this.PanelFileChecked.TabIndex = 25;
+            this.dragControl1.SelectControl = this.label2;
             // 
-            // VideoManagement
+            // FormDocumentCU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -199,11 +198,10 @@
             this.ClientSize = new System.Drawing.Size(376, 244);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "VideoManagement";
-            this.Padding = new System.Windows.Forms.Padding(5);
+            this.Name = "FormDocumentCU";
+            this.Padding = new System.Windows.Forms.Padding(3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "VideoManagement";
+            this.Text = "FormDocumentCU";
             this.TopMost = true;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -214,14 +212,14 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private fruslib.KstomTextBox KtextTittle;
-        private System.Windows.Forms.Label label2;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton btn_close;
-        private FontAwesome.Sharp.IconButton btn_Register;
-        private fruslib.DragControl dragControl1;
-        private fruslib.DragControl dragControl2;
-        private System.Windows.Forms.Label LabelProcces;
         private System.Windows.Forms.Panel PanelFileChecked;
+        private System.Windows.Forms.Label LabelProcces;
+        private FontAwesome.Sharp.IconButton btn_Register;
+        private FontAwesome.Sharp.IconButton btn_close;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.Label label2;
+        private fruslib.KstomTextBox KtextTittle;
+        private fruslib.DragControl dragControl2;
+        private fruslib.DragControl dragControl1;
     }
 }

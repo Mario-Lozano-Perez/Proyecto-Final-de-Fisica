@@ -97,10 +97,35 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config.cs" />
+    <Compile Include="DatabaseClass\Document.cs" />
     <Compile Include="DatabaseClass\Question.cs" />
     <Compile Include="DatabaseClass\Questionaire.cs" />
     <Compile Include="DatabaseClass\User.cs" />
     <Compile Include="DatabaseClass\Video.cs" />
+    <Compile Include="Forms_Display\Document\documentView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms_Display\Document\documentView.Designer.cs">
+      <DependentUpon>documentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Display\Document\FormDocumentCU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Display\Document\FormDocumentCU.Designer.cs">
+      <DependentUpon>FormDocumentCU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Display\Document\FormDocumentManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Display\Document\FormDocumentManage.Designer.cs">
+      <DependentUpon>FormDocumentManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_Display\Document\FormDocumentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_Display\Document\FormDocumentView.Designer.cs">
+      <DependentUpon>FormDocumentView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms_Display\Questionaire\QuestionsMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +245,18 @@
     <Compile Include="Settings\UserSettings.cs" />
     <Compile Include="Settings\UserSettingsLoader.cs" />
     <Compile Include="SqliteHelper.cs" />
+    <EmbeddedResource Include="Forms_Display\Document\documentView.resx">
+      <DependentUpon>documentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Display\Document\FormDocumentCU.resx">
+      <DependentUpon>FormDocumentCU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Display\Document\FormDocumentManage.resx">
+      <DependentUpon>FormDocumentManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_Display\Document\FormDocumentView.resx">
+      <DependentUpon>FormDocumentView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms_Display\Questionaire\QuestionsMain.resx">
       <DependentUpon>QuestionsMain.cs</DependentUpon>
     </EmbeddedResource>

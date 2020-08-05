@@ -36,6 +36,8 @@
             this.dragControl1 = new fruslib.DragControl();
             this.pnl_topBar = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_minimize = new FontAwesome.Sharp.IconButton();
+            this.btn_close = new FontAwesome.Sharp.IconButton();
             this.Context = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.iconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
             this.iconMenuItem2 = new FontAwesome.Sharp.IconMenuItem();
@@ -46,14 +48,12 @@
             this.iconMenuItem6 = new FontAwesome.Sharp.IconMenuItem();
             this.iconMenuItem7 = new FontAwesome.Sharp.IconMenuItem();
             this.iconMenuItem8 = new FontAwesome.Sharp.IconMenuItem();
-            this.btn_minimize = new FontAwesome.Sharp.IconButton();
-            this.btn_close = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnl_FormContainer = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ButtonTrophy = new FontAwesome.Sharp.IconButton();
             this.btn_adminPanel = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.ButtonDocuments = new FontAwesome.Sharp.IconButton();
             this.ButtonQuestionaire = new FontAwesome.Sharp.IconButton();
             this.ButtonVideos = new FontAwesome.Sharp.IconButton();
             this.btn_Home = new FontAwesome.Sharp.IconButton();
@@ -105,7 +105,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.ContextMenuStrip = this.Context;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox1.Image = global::Proyecto_Final_de_Fisica.Properties.Resources.Atom;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
@@ -115,122 +114,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
-            // 
-            // Context
-            // 
-            this.Context.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.Context.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.iconMenuItem1,
-            this.iconMenuItem2,
-            this.iconMenuItem3,
-            this.iconMenuItem4,
-            this.toolStripSeparator2,
-            this.iconMenuItem5,
-            this.iconMenuItem6,
-            this.iconMenuItem7,
-            this.iconMenuItem8});
-            this.Context.Name = "contextMenuStrip2";
-            this.Context.Size = new System.Drawing.Size(170, 218);
-            // 
-            // iconMenuItem1
-            // 
-            this.iconMenuItem1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconMenuItem1.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.iconMenuItem1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconMenuItem1.IconSize = 16;
-            this.iconMenuItem1.Name = "iconMenuItem1";
-            this.iconMenuItem1.Rotation = 0D;
-            this.iconMenuItem1.Size = new System.Drawing.Size(169, 26);
-            this.iconMenuItem1.Text = "Inicio";
-            this.iconMenuItem1.Click += new System.EventHandler(this.Btn_Home_Click);
-            // 
-            // iconMenuItem2
-            // 
-            this.iconMenuItem2.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconMenuItem2.IconChar = FontAwesome.Sharp.IconChar.Video;
-            this.iconMenuItem2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconMenuItem2.IconSize = 16;
-            this.iconMenuItem2.Name = "iconMenuItem2";
-            this.iconMenuItem2.Rotation = 0D;
-            this.iconMenuItem2.Size = new System.Drawing.Size(169, 26);
-            this.iconMenuItem2.Text = "Videos";
-            this.iconMenuItem2.Click += new System.EventHandler(this.ButtonVideos_Click);
-            // 
-            // iconMenuItem3
-            // 
-            this.iconMenuItem3.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconMenuItem3.IconChar = FontAwesome.Sharp.IconChar.BookOpen;
-            this.iconMenuItem3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconMenuItem3.IconSize = 16;
-            this.iconMenuItem3.Name = "iconMenuItem3";
-            this.iconMenuItem3.Rotation = 0D;
-            this.iconMenuItem3.Size = new System.Drawing.Size(169, 26);
-            this.iconMenuItem3.Text = "Cuestionario";
-            this.iconMenuItem3.Click += new System.EventHandler(this.ButtonQuestionaire_Click);
-            // 
-            // iconMenuItem4
-            // 
-            this.iconMenuItem4.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconMenuItem4.IconChar = FontAwesome.Sharp.IconChar.Book;
-            this.iconMenuItem4.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconMenuItem4.IconSize = 16;
-            this.iconMenuItem4.Name = "iconMenuItem4";
-            this.iconMenuItem4.Rotation = 0D;
-            this.iconMenuItem4.Size = new System.Drawing.Size(169, 26);
-            this.iconMenuItem4.Text = "Documentos";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(166, 6);
-            // 
-            // iconMenuItem5
-            // 
-            this.iconMenuItem5.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconMenuItem5.IconChar = FontAwesome.Sharp.IconChar.InfoCircle;
-            this.iconMenuItem5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconMenuItem5.IconSize = 16;
-            this.iconMenuItem5.Name = "iconMenuItem5";
-            this.iconMenuItem5.Rotation = 0D;
-            this.iconMenuItem5.Size = new System.Drawing.Size(169, 26);
-            this.iconMenuItem5.Text = "Acerca de";
-            // 
-            // iconMenuItem6
-            // 
-            this.iconMenuItem6.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconMenuItem6.IconChar = FontAwesome.Sharp.IconChar.UserAltSlash;
-            this.iconMenuItem6.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconMenuItem6.IconSize = 16;
-            this.iconMenuItem6.Name = "iconMenuItem6";
-            this.iconMenuItem6.Rotation = 0D;
-            this.iconMenuItem6.Size = new System.Drawing.Size(169, 26);
-            this.iconMenuItem6.Text = "Cerrar Sesión";
-            this.iconMenuItem6.Click += new System.EventHandler(this.LogOut);
-            // 
-            // iconMenuItem7
-            // 
-            this.iconMenuItem7.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconMenuItem7.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.iconMenuItem7.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconMenuItem7.IconSize = 16;
-            this.iconMenuItem7.Name = "iconMenuItem7";
-            this.iconMenuItem7.Rotation = 0D;
-            this.iconMenuItem7.Size = new System.Drawing.Size(169, 26);
-            this.iconMenuItem7.Text = "Minimizar";
-            this.iconMenuItem7.Click += new System.EventHandler(this.MinimizeProgram);
-            // 
-            // iconMenuItem8
-            // 
-            this.iconMenuItem8.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconMenuItem8.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
-            this.iconMenuItem8.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.iconMenuItem8.IconSize = 16;
-            this.iconMenuItem8.Name = "iconMenuItem8";
-            this.iconMenuItem8.Rotation = 0D;
-            this.iconMenuItem8.Size = new System.Drawing.Size(169, 26);
-            this.iconMenuItem8.Text = "Salir";
-            this.iconMenuItem8.Click += new System.EventHandler(this.ExitProgram);
             // 
             // btn_minimize
             // 
@@ -277,6 +160,132 @@
             this.btn_close.UseVisualStyleBackColor = false;
             this.btn_close.Click += new System.EventHandler(this.ExitProgram);
             // 
+            // Context
+            // 
+            this.Context.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            this.Context.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.Context.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.iconMenuItem1,
+            this.iconMenuItem2,
+            this.iconMenuItem3,
+            this.iconMenuItem4,
+            this.toolStripSeparator2,
+            this.iconMenuItem5,
+            this.iconMenuItem6,
+            this.iconMenuItem7,
+            this.iconMenuItem8});
+            this.Context.Name = "contextMenuStrip2";
+            this.Context.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.Context.Size = new System.Drawing.Size(170, 218);
+            // 
+            // iconMenuItem1
+            // 
+            this.iconMenuItem1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconMenuItem1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconMenuItem1.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.iconMenuItem1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(181)))), ((int)(((byte)(113)))));
+            this.iconMenuItem1.IconSize = 16;
+            this.iconMenuItem1.Name = "iconMenuItem1";
+            this.iconMenuItem1.Rotation = 0D;
+            this.iconMenuItem1.Size = new System.Drawing.Size(169, 26);
+            this.iconMenuItem1.Text = "Inicio";
+            this.iconMenuItem1.Click += new System.EventHandler(this.Btn_Home_Click);
+            // 
+            // iconMenuItem2
+            // 
+            this.iconMenuItem2.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconMenuItem2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconMenuItem2.IconChar = FontAwesome.Sharp.IconChar.Video;
+            this.iconMenuItem2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(107)))), ((int)(((byte)(124)))));
+            this.iconMenuItem2.IconSize = 16;
+            this.iconMenuItem2.Name = "iconMenuItem2";
+            this.iconMenuItem2.Rotation = 0D;
+            this.iconMenuItem2.Size = new System.Drawing.Size(169, 26);
+            this.iconMenuItem2.Text = "Videos";
+            this.iconMenuItem2.Click += new System.EventHandler(this.ButtonVideos_Click);
+            // 
+            // iconMenuItem3
+            // 
+            this.iconMenuItem3.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconMenuItem3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconMenuItem3.IconChar = FontAwesome.Sharp.IconChar.BookOpen;
+            this.iconMenuItem3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(185)))), ((int)(((byte)(172)))));
+            this.iconMenuItem3.IconSize = 16;
+            this.iconMenuItem3.Name = "iconMenuItem3";
+            this.iconMenuItem3.Rotation = 0D;
+            this.iconMenuItem3.Size = new System.Drawing.Size(169, 26);
+            this.iconMenuItem3.Text = "Cuestionario";
+            this.iconMenuItem3.Click += new System.EventHandler(this.ButtonQuestionaire_Click);
+            // 
+            // iconMenuItem4
+            // 
+            this.iconMenuItem4.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconMenuItem4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconMenuItem4.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.iconMenuItem4.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.iconMenuItem4.IconSize = 16;
+            this.iconMenuItem4.Name = "iconMenuItem4";
+            this.iconMenuItem4.Rotation = 0D;
+            this.iconMenuItem4.Size = new System.Drawing.Size(169, 26);
+            this.iconMenuItem4.Text = "Documentos";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(166, 6);
+            // 
+            // iconMenuItem5
+            // 
+            this.iconMenuItem5.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconMenuItem5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconMenuItem5.IconChar = FontAwesome.Sharp.IconChar.InfoCircle;
+            this.iconMenuItem5.IconColor = System.Drawing.Color.SteelBlue;
+            this.iconMenuItem5.IconSize = 16;
+            this.iconMenuItem5.Name = "iconMenuItem5";
+            this.iconMenuItem5.Rotation = 0D;
+            this.iconMenuItem5.Size = new System.Drawing.Size(169, 26);
+            this.iconMenuItem5.Text = "Acerca de";
+            // 
+            // iconMenuItem6
+            // 
+            this.iconMenuItem6.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconMenuItem6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconMenuItem6.IconChar = FontAwesome.Sharp.IconChar.UserAltSlash;
+            this.iconMenuItem6.IconColor = System.Drawing.Color.Tomato;
+            this.iconMenuItem6.IconSize = 16;
+            this.iconMenuItem6.Name = "iconMenuItem6";
+            this.iconMenuItem6.Rotation = 0D;
+            this.iconMenuItem6.Size = new System.Drawing.Size(169, 26);
+            this.iconMenuItem6.Text = "Cerrar Sesión";
+            this.iconMenuItem6.Click += new System.EventHandler(this.LogOut);
+            // 
+            // iconMenuItem7
+            // 
+            this.iconMenuItem7.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconMenuItem7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconMenuItem7.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.iconMenuItem7.IconColor = System.Drawing.Color.DodgerBlue;
+            this.iconMenuItem7.IconSize = 16;
+            this.iconMenuItem7.Name = "iconMenuItem7";
+            this.iconMenuItem7.Rotation = 0D;
+            this.iconMenuItem7.Size = new System.Drawing.Size(169, 26);
+            this.iconMenuItem7.Text = "Minimizar";
+            this.iconMenuItem7.Click += new System.EventHandler(this.MinimizeProgram);
+            // 
+            // iconMenuItem8
+            // 
+            this.iconMenuItem8.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconMenuItem8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iconMenuItem8.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
+            this.iconMenuItem8.IconColor = System.Drawing.Color.Crimson;
+            this.iconMenuItem8.IconSize = 16;
+            this.iconMenuItem8.Name = "iconMenuItem8";
+            this.iconMenuItem8.Rotation = 0D;
+            this.iconMenuItem8.Size = new System.Drawing.Size(169, 26);
+            this.iconMenuItem8.Text = "Salir";
+            this.iconMenuItem8.Click += new System.EventHandler(this.ExitProgram);
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.pnl_FormContainer);
@@ -303,7 +312,7 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(15)))), ((int)(((byte)(20)))));
             this.panel2.Controls.Add(this.ButtonTrophy);
             this.panel2.Controls.Add(this.btn_adminPanel);
-            this.panel2.Controls.Add(this.iconButton3);
+            this.panel2.Controls.Add(this.ButtonDocuments);
             this.panel2.Controls.Add(this.ButtonQuestionaire);
             this.panel2.Controls.Add(this.ButtonVideos);
             this.panel2.Controls.Add(this.btn_Home);
@@ -357,25 +366,26 @@
             this.btn_adminPanel.UseVisualStyleBackColor = true;
             this.btn_adminPanel.Click += new System.EventHandler(this.Btn_adminPanel_Click);
             // 
-            // iconButton3
+            // ButtonDocuments
             // 
-            this.iconButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(15)))), ((int)(((byte)(20)))));
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(107)))), ((int)(((byte)(124)))));
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Book;
-            this.iconButton3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.iconButton3.IconSize = 24;
-            this.iconButton3.Location = new System.Drawing.Point(0, 153);
-            this.iconButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 25);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Rotation = 0D;
-            this.iconButton3.Size = new System.Drawing.Size(52, 50);
-            this.iconButton3.TabIndex = 3;
-            this.iconButton3.UseVisualStyleBackColor = true;
+            this.ButtonDocuments.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonDocuments.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ButtonDocuments.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(15)))), ((int)(((byte)(20)))));
+            this.ButtonDocuments.FlatAppearance.BorderSize = 0;
+            this.ButtonDocuments.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(107)))), ((int)(((byte)(124)))));
+            this.ButtonDocuments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonDocuments.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.ButtonDocuments.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.ButtonDocuments.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ButtonDocuments.IconSize = 24;
+            this.ButtonDocuments.Location = new System.Drawing.Point(0, 153);
+            this.ButtonDocuments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 25);
+            this.ButtonDocuments.Name = "ButtonDocuments";
+            this.ButtonDocuments.Rotation = 0D;
+            this.ButtonDocuments.Size = new System.Drawing.Size(52, 50);
+            this.ButtonDocuments.TabIndex = 3;
+            this.ButtonDocuments.UseVisualStyleBackColor = true;
+            this.ButtonDocuments.Click += new System.EventHandler(this.ButtonDocuments_Click);
             // 
             // ButtonQuestionaire
             // 
@@ -451,6 +461,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
             this.ClientSize = new System.Drawing.Size(1097, 639);
+            this.ContextMenuStrip = this.Context;
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -477,7 +488,7 @@
         public System.Windows.Forms.Panel pnl_FormContainer;
         private System.Windows.Forms.Panel panel2;
         private FontAwesome.Sharp.IconButton btn_adminPanel;
-        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton ButtonDocuments;
         private FontAwesome.Sharp.IconButton ButtonQuestionaire;
         private FontAwesome.Sharp.IconButton ButtonVideos;
         private FontAwesome.Sharp.IconButton btn_Home;

@@ -3,20 +3,22 @@ using System.Windows.Forms;
 using fruslib;
 using Proyecto_Final_de_Fisica.DatabaseClass;
 using Proyecto_Final_de_Fisica.Forms_Display;
+using Proyecto_Final_de_Fisica.Forms_Display.Document;
 
 namespace Proyecto_Final_de_Fisica
 {
     public partial class MainForm : Form
     {
-        private readonly frm_Logg LoggerForm;
+        private readonly frm_Logg LOGGER_FORM;
 
-        public FormUsserDashBoard userDashboard;
-        public frm_AdminDashboard adminDashboard;
-        public Forms_Display.Questionaire.QuestionsStart questionaireStart;
-        public FormViewVideos videosView;
-        public Config configuration;
-        public User CurrentUser;
-        public Forms_Display.Questionaire.RankingForm rankingForm;
+        public FormUsserDashBoard USER_DASHBOARD;
+        public frm_AdminDashboard ADMIN_DASHBOARD;
+        public Forms_Display.Questionaire.QuestionsStart QUESTIONAIRE_START;
+        public FormViewVideos VIDEOS_VIEW;
+        public Config CONFIGURATION;
+        public User CURRENT_USER;
+        public Forms_Display.Questionaire.RankingForm RANKING_FORM;
+        public FormDocumentView DOCUMENTS_FORM;
 
         public MainForm()
         {
@@ -26,14 +28,14 @@ namespace Proyecto_Final_de_Fisica
 
         public MainForm(User CurrentUser, frm_Logg LogForm)
         {
-            this.LoggerForm = LogForm;
-            this.CurrentUser = CurrentUser;
+            LOGGER_FORM = LogForm;
+            CURRENT_USER = CurrentUser;
 
 
             InitializeComponent();
             InitializeForms();
 
-            if (this.CurrentUser.Level < 1)
+            if (CURRENT_USER.Level < 1)
             {
                 btn_adminPanel.Hide();
             }
@@ -41,14 +43,15 @@ namespace Proyecto_Final_de_Fisica
 
         private void InitializeForms()
         {
-            this.userDashboard = new FormUsserDashBoard(this);
-            this.adminDashboard = new frm_AdminDashboard(this);
-            this.videosView = new FormViewVideos(this);
-            this.questionaireStart = new Forms_Display.Questionaire.QuestionsStart(this);
-            this.rankingForm = new Forms_Display.Questionaire.RankingForm(this);
+            USER_DASHBOARD = new FormUsserDashBoard(this);
+            ADMIN_DASHBOARD = new frm_AdminDashboard(this);
+            VIDEOS_VIEW = new FormViewVideos(this);
+            QUESTIONAIRE_START = new Forms_Display.Questionaire.QuestionsStart(this);
+            RANKING_FORM = new Forms_Display.Questionaire.RankingForm(this);
+            DOCUMENTS_FORM = new FormDocumentView(this);
 
             //Load the User DashBoard
-            MostUsed.OpenFormInPanel(userDashboard, pnl_FormContainer);
+            MostUsed.OpenFormInPanel(USER_DASHBOARD, pnl_FormContainer);
         }
 
         private void ExitProgram(object sender, EventArgs e)
@@ -63,12 +66,12 @@ namespace Proyecto_Final_de_Fisica
 
         private void Btn_Home_Click(object sender, EventArgs e)
         {
-            MostUsed.OpenFormInPanel(userDashboard, pnl_FormContainer);
+            MostUsed.OpenFormInPanel(USER_DASHBOARD, pnl_FormContainer);
         }
 
         private void Btn_adminPanel_Click(object sender, EventArgs e)
         {
-            MostUsed.OpenFormInPanel(adminDashboard, pnl_FormContainer);
+            MostUsed.OpenFormInPanel(ADMIN_DASHBOARD, pnl_FormContainer);
         }
 
 
@@ -76,7 +79,7 @@ namespace Proyecto_Final_de_Fisica
 
         public void LogOut(object sender, EventArgs e)
         {
-            LoggerForm.Show();
+            LOGGER_FORM.Show();
             Dispose();
         }
 
@@ -92,29 +95,34 @@ namespace Proyecto_Final_de_Fisica
 
         public void ButtonVideos_Click(object sender, EventArgs e)
         {
-            MostUsed.OpenFormInPanel(videosView, pnl_FormContainer);
+            MostUsed.OpenFormInPanel(VIDEOS_VIEW, pnl_FormContainer);
         }
 
         public void ButtonQuestionaire_Click(object sender, EventArgs e)
         {
-            if (questionaireStart.NextQuestionArea == null) MostUsed.OpenFormInPanel(questionaireStart, pnl_FormContainer);
+            if (QUESTIONAIRE_START.NextQuestionArea == null) MostUsed.OpenFormInPanel(QUESTIONAIRE_START, pnl_FormContainer);
             else
             {
-                if (questionaireStart.NextQuestionArea.FinishForm == null)
+                if (QUESTIONAIRE_START.NextQuestionArea.FinishForm == null)
                 {
-                    MostUsed.OpenFormInPanel(questionaireStart.NextQuestionArea, pnl_FormContainer);
+                    MostUsed.OpenFormInPanel(QUESTIONAIRE_START.NextQuestionArea, pnl_FormContainer);
                 }
                 else
                 {
-                    MostUsed.OpenFormInPanel(questionaireStart.NextQuestionArea.FinishForm, pnl_FormContainer);
+                    MostUsed.OpenFormInPanel(QUESTIONAIRE_START.NextQuestionArea.FinishForm, pnl_FormContainer);
                 }
             }
         }
 
         private void ButtonTrophy_Click(object sender, EventArgs e)
         {
-            rankingForm.StartReading();
-            MostUsed.OpenFormInPanel(rankingForm, pnl_FormContainer);
+            RANKING_FORM.StartReading();
+            MostUsed.OpenFormInPanel(RANKING_FORM, pnl_FormContainer);
+        }
+
+        private void ButtonDocuments_Click(object sender, EventArgs e)
+        {
+            MostUsed.OpenFormInPanel(DOCUMENTS_FORM, pnl_FormContainer);
         }
     }
 }

@@ -2,10 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Proyecto_Final_de_Fisica.DatabaseClass
 {
@@ -14,8 +10,8 @@ namespace Proyecto_Final_de_Fisica.DatabaseClass
         private static readonly string databasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Proyecto Final de Fisica", "database.db3");
         private static readonly string VideosFolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Proyecto Final de Fisica", "Videos");
         public int Id { get; set; }
-        public String Tittle { get; set; }
-        public String Url { get; set; }
+        public string Tittle { get; set; }
+        public string Url { get; set; }
 
         public Video(int id, string tittle, string url)
         {
@@ -112,7 +108,7 @@ namespace Proyecto_Final_de_Fisica.DatabaseClass
             }
         }
 
-        private string getUrlForName(string url)
+        private string GetFullUrlName(string url)
         {
             return VideosFolderPath + "/" + url;
         }
@@ -124,7 +120,7 @@ namespace Proyecto_Final_de_Fisica.DatabaseClass
                 string query = "UPDATE videos SET tittle = '" + Tittle + "', url = '" + Url + "' WHERE id = '" + Id + "'";
                 if (oldUrl != Url)
                 {
-                    if (File.Exists(getUrlForName(oldUrl))) File.Delete(getUrlForName(oldUrl));
+                    if (File.Exists(GetFullUrlName(oldUrl))) File.Delete(GetFullUrlName(oldUrl));
                     if (!File.Exists(getFullUrl())) File.Copy(newUrl, getFullUrl());
                     else throw new Exception("File Already Exists");
                 }

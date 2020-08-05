@@ -87,7 +87,7 @@
             this.LabelQuestionairesTaken.AutoSize = true;
             this.LabelQuestionairesTaken.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelQuestionairesTaken.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.LabelQuestionairesTaken.Location = new System.Drawing.Point(12, 71);
+            this.LabelQuestionairesTaken.Location = new System.Drawing.Point(12, 99);
             this.LabelQuestionairesTaken.Name = "LabelQuestionairesTaken";
             this.LabelQuestionairesTaken.Size = new System.Drawing.Size(273, 30);
             this.LabelQuestionairesTaken.TabIndex = 18;
@@ -98,9 +98,9 @@
             this.LabelRankingPos.AutoSize = true;
             this.LabelRankingPos.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelRankingPos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.LabelRankingPos.Location = new System.Drawing.Point(12, 18);
+            this.LabelRankingPos.Location = new System.Drawing.Point(12, 28);
             this.LabelRankingPos.Name = "LabelRankingPos";
-            this.LabelRankingPos.Size = new System.Drawing.Size(239, 36);
+            this.LabelRankingPos.Size = new System.Drawing.Size(233, 30);
             this.LabelRankingPos.TabIndex = 16;
             this.LabelRankingPos.Text = "Posición en el ranking: ";
             // 
@@ -222,7 +222,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(111)))));
-            this.label3.Location = new System.Drawing.Point(39, 24);
+            this.label3.Location = new System.Drawing.Point(32, 26);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(185, 28);
             this.label3.TabIndex = 10;

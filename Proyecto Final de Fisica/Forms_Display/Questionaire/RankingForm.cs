@@ -36,7 +36,7 @@ namespace Proyecto_Final_de_Fisica.Forms_Display.Questionaire
             foreach (User item in usuarios)
             {
                 RankUser userToDisplay = new RankUser(item);
-                if (item.Id == FatherForm.CurrentUser.Id) userToDisplay.NameColor = Color.NavajoWhite;
+                if (item.Id == FatherForm.CURRENT_USER.Id) userToDisplay.NameColor = Color.NavajoWhite;
                 userToDisplay.Width = PanelRank.Width - 36;
 
                 PanelRank.Controls.Add(userToDisplay);
@@ -58,7 +58,7 @@ namespace Proyecto_Final_de_Fisica.Forms_Display.Questionaire
             foreach (User item in usuarios)
             {
                 RankUser userToDisplay = new RankUser(item);
-                if (item.Id == FatherForm.CurrentUser.Id) userToDisplay.NameColor = Color.Green;
+                if (item.Id == FatherForm.CURRENT_USER.Id) userToDisplay.NameColor = Color.Green;
                 userToDisplay.Width = PanelRank.Width - 30;
 
                 PanelRank.Controls.Add(userToDisplay);

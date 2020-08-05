@@ -29,6 +29,7 @@ namespace Proyecto_Final_de_Fisica.Frms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormManageUserValues));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_Apply = new System.Windows.Forms.Button();
@@ -54,7 +55,7 @@ namespace Proyecto_Final_de_Fisica.Frms
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Padding = new System.Windows.Forms.Padding(5);
             this.panel1.Size = new System.Drawing.Size(325, 470);
             this.panel1.TabIndex = 0;
             // 
@@ -260,6 +261,7 @@ namespace Proyecto_Final_de_Fisica.Frms
             this.ClientSize = new System.Drawing.Size(325, 470);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormManageUserValues";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

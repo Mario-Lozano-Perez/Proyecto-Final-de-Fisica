@@ -72,7 +72,7 @@ namespace Proyecto_Final_de_Fisica.Forms_Display
 
         private void ButtonVerify_Click(object sender, EventArgs e)
         {
-            Father.FatherForm.FatherForm.userDashboard.LoadUserData();
+            Father.FatherForm.FatherForm.USER_DASHBOARD.LoadUserData();
             Father.ButtonInterrupt_Click(sender, e);
             this.Dispose();
             Close();

@@ -1,4 +1,5 @@
 ﻿using fruslib;
+using Proyecto_Final_de_Fisica.Forms_Display.Document;
 using Proyecto_Final_de_Fisica.Frms;
 using Proyecto_Final_de_Fisica.Frms.VideosAdmin;
 using System;
@@ -19,6 +20,7 @@ namespace Proyecto_Final_de_Fisica
         UserListForm userListForm;
         QuestionsListForm questionsListForm;
         VideosListForm videoListForm;
+        FormDocumentManage documentListForm;
 
         private readonly string databasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Proyecto Final de Fisica", "database.db3");
         public MainForm fatherForm;
@@ -35,6 +37,7 @@ namespace Proyecto_Final_de_Fisica
             this.userListForm = new UserListForm(this);
             this.questionsListForm = new QuestionsListForm(this);
             videoListForm = new VideosListForm(this);
+            documentListForm = new FormDocumentManage(this);
             this.fatherForm = fatherForm;
             LoadData();
         }
@@ -43,6 +46,25 @@ namespace Proyecto_Final_de_Fisica
         {
             int userCount = SqliteHelper.LlenarDataSet(databasePath, "SELECT * FROM users").Tables[0].Rows.Count;
             lbl_UserCount.Text = userCount.ToString();
+
+            var topUserData = SqliteHelper.LlenarDataSet(databasePath, "Select name from ranking limit 1").Tables[0];
+
+            try
+            {
+                string UserName = topUserData.Rows[0]["name"].ToString();
+                LabelTopUser.Text = UserName;
+            }
+            catch (Exception _)
+            {
+                LabelTopUser.Text = "Actualmente no hay ranking";
+            }
+
+            LabelQuestionairesAmount.Text = SqliteHelper.LlenarDataSet(databasePath, "Select count(id) as count from questionaire").Tables[0].Rows[0]["count"].ToString();
+
+            LabelVideosAmount.Text = SqliteHelper.LlenarDataSet(databasePath, "Select count(id) as count from videos").Tables[0].Rows[0]["count"].ToString();
+
+            LabelQuestionsAmount.Text = SqliteHelper.LlenarDataSet(databasePath, "Select count(id) as count from questions").Tables[0].Rows[0]["count"].ToString();
+
         }
 
         private void Btn_Reload_Click(object sender, EventArgs e)
@@ -63,6 +85,12 @@ namespace Proyecto_Final_de_Fisica
         private void Btn_Videos_Click(object sender, EventArgs e)
         {
             MostUsed.OpenFormInPanel(videoListForm, this.fatherForm.pnl_FormContainer);
+        }
+
+        private void Btn_Documents_Click(object sender, EventArgs e)
+        {
+            MostUsed.OpenFormInPanel(documentListForm, this.fatherForm.pnl_FormContainer);
+
         }
     }
 }

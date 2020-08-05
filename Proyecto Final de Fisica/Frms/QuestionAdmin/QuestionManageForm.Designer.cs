@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuestionManageForm));
             this.pnl_Main = new System.Windows.Forms.Panel();
             this.KtextText = new fruslib.KstomTextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -276,6 +277,7 @@
             this.ClientSize = new System.Drawing.Size(541, 526);
             this.Controls.Add(this.pnl_Main);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "QuestionManageForm";
             this.Padding = new System.Windows.Forms.Padding(5);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

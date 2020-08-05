@@ -34,7 +34,7 @@ namespace Proyecto_Final_de_Fisica.Forms_Display.Questionaire
             {
                 int value = Convert.ToInt32(TextMaxNumber.Text);
                 int CuestionMaxNumber = Convert.ToInt32(TextMaxNumber.Text);
-                Questionaire = new DatabaseClass.Questionaire(FatherForm.CurrentUser, CuestionMaxNumber);
+                Questionaire = new DatabaseClass.Questionaire(FatherForm.CURRENT_USER, CuestionMaxNumber);
                 NextQuestionArea = new QuestionsMain(this);
                 MostUsed.OpenFormInPanel(NextQuestionArea, FatherForm.pnl_FormContainer);
             }

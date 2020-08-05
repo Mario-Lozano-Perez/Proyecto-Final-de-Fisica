@@ -131,7 +131,12 @@ namespace Proyecto_Final_de_Fisica.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to CREATE TABLE [users](
+        ///   Looks up a localized string similar to CREATE TABLE [documents](
+        ///  [id] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE, 
+        ///  [title] VARCHAR(255) NOT NULL UNIQUE, 
+        ///  [url] VARCHAR(255) NOT NULL UNIQUE);
+        ///
+        ///CREATE TABLE [users](
         ///  [id] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE, 
         ///  [ci] VARCHAR(20) NOT NULL UNIQUE, 
         ///  [name] VARCHAR(255) NOT NULL, 
@@ -140,12 +145,7 @@ namespace Proyecto_Final_de_Fisica.Properties {
         ///
         ///CREATE TABLE [questionaire](
         ///  [id] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE, 
-        ///  [user_id] INTEGER NOT NULL REFERENCES [users]([id]) ON DELETE CASCADE, 
-        ///  [points] INTEGER NOT NULL);
-        ///
-        ///CREATE TABLE [questions](
-        ///  [id] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE, 
-        ///  [rest of string was truncated]&quot;;.
+        ///  [user_id] INTEGER NOT N [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string SQL_BUILDER {
             get {

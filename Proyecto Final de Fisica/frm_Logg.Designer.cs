@@ -91,7 +91,7 @@
             this.btn_close.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
             this.btn_close.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(149)))), ((int)(((byte)(163)))));
             this.btn_close.IconSize = 20;
-            this.btn_close.Location = new System.Drawing.Point(248, 9);
+            this.btn_close.Location = new System.Drawing.Point(247, 7);
             this.btn_close.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_close.Name = "btn_close";
             this.btn_close.Padding = new System.Windows.Forms.Padding(5);

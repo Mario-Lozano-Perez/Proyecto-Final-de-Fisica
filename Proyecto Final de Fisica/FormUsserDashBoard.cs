@@ -21,7 +21,7 @@ namespace Proyecto_Final_de_Fisica
             InitializeComponent();
             this.fatherForm = fatherForm;
             formsHolder = fatherForm.pnl_FormContainer;
-            CurrentUser = fatherForm.CurrentUser;
+            CurrentUser = fatherForm.CURRENT_USER;
 
             LoadUserData();
         }
@@ -41,7 +41,7 @@ namespace Proyecto_Final_de_Fisica
 
         private void Btn_books_Click(object sender, EventArgs e)
         {
-            MostUsed.OpenFormInPanel(fatherForm.videosView, this.formsHolder);
+            MostUsed.OpenFormInPanel(fatherForm.VIDEOS_VIEW, this.formsHolder);
         }
 
         private void SystemLogout(object sender, EventArgs e)
@@ -61,9 +61,9 @@ namespace Proyecto_Final_de_Fisica
 
         private void ButtonRanking_Click(object sender, EventArgs e)
         {
-            fatherForm.rankingForm.StartReading();
+            fatherForm.RANKING_FORM.StartReading();
 
-            MostUsed.OpenFormInPanel(fatherForm.rankingForm, fatherForm.pnl_FormContainer);
+            MostUsed.OpenFormInPanel(fatherForm.RANKING_FORM, fatherForm.pnl_FormContainer);
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using Proyecto_Final_de_Fisica.DatabaseClass;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,31 +7,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Proyecto_Final_de_Fisica.DatabaseClass;
 
-namespace Proyecto_Final_de_Fisica.Frms.VideosAdmin
+namespace Proyecto_Final_de_Fisica.Forms_Display.Document
 {
-    public partial class VideoManagement : Form
+    public partial class FormDocumentCU : Form
     {
-        private VideosListForm fatherForm;
-        private Video oldVideo;
+
+        private FormDocumentManage fatherForm;
+        private DatabaseClass.Document oldDocument;
         private string fileOriginPath;
         private string fileName;
 
         private readonly OpenFileDialog FindVideoDialog = new OpenFileDialog
         {
-            Title = "Selecciona un archivo de video",
-            Filter = "Archivos de video|*.mpg;*.avi;*.mp4;*.mkv;*.ogg;*.flv;*.mov;*.wmv|Todos los archivos|*.*",
+            Title = "Selecciona un Documento",
+            Filter = "Documentos|*.doc;*.docx;*.ppt;*.pptx;*.pdf;*.cls;*.xls;*.xlsx;*.epub|Todos los archivos|*.*",
             Multiselect = false
         };
 
-        public VideoManagement()
+        public FormDocumentCU()
         {
             InitializeComponent();
             if (fileName != null) PanelFileChecked.BackColor = Color.PaleGreen;
             else PanelFileChecked.BackColor = Color.LightCoral;
         }
 
-        public VideoManagement(VideosListForm fatherForm)
+        public FormDocumentCU(FormDocumentManage fatherForm)
         {
             InitializeComponent();
             this.fatherForm = fatherForm;
@@ -40,14 +41,14 @@ namespace Proyecto_Final_de_Fisica.Frms.VideosAdmin
             else PanelFileChecked.BackColor = Color.LightCoral;
         }
 
-        public VideoManagement(VideosListForm fatherForm, Video oldVideo)
+        public FormDocumentCU(FormDocumentManage fatherForm, DatabaseClass.Document oldVideo)
         {
             InitializeComponent();
             this.fatherForm = fatherForm;
-            this.oldVideo = oldVideo;
-            fileName = this.oldVideo.Url;
-            fileOriginPath = this.oldVideo.getFullUrl();
-            KtextTittle.Value = this.oldVideo.Tittle;
+            this.oldDocument = oldVideo;
+            fileName = this.oldDocument.Url;
+            fileOriginPath = this.oldDocument.GetFullUrl();
+            KtextTittle.Value = this.oldDocument.Title;
 
             if (fileName != null) PanelFileChecked.BackColor = Color.PaleGreen;
             else PanelFileChecked.BackColor = Color.LightCoral;
@@ -65,7 +66,7 @@ namespace Proyecto_Final_de_Fisica.Frms.VideosAdmin
 
             if (FindVideoDialog.ShowDialog() == DialogResult.OK)
             {
-                if (oldVideo != null)
+                if (oldDocument != null)
                 {
                     fileOriginPath = FindVideoDialog.FileName;
                     fileName = FindVideoDialog.SafeFileName;
@@ -92,7 +93,7 @@ namespace Proyecto_Final_de_Fisica.Frms.VideosAdmin
 
             try
             {
-                if (oldVideo == null) await CreateRegisterAsynk();
+                if (oldDocument == null) await CreateRegisterAsynk();
                 else await UpdateRegisterAsynk();
             }
             catch (Exception)
@@ -134,13 +135,13 @@ namespace Proyecto_Final_de_Fisica.Frms.VideosAdmin
 
             if (fileName != "" && fileOriginPath != "")
             {
-                Video videoToAdd = new Video(oldVideo.Id);
-                videoToAdd.Tittle = KtextTittle.Value;
+                DatabaseClass.Document videoToAdd = new DatabaseClass.Document(oldDocument.Id);
+                videoToAdd.Title = KtextTittle.Value;
                 videoToAdd.Url = fileName;
 
                 try
                 {
-                    videoToAdd.Update(oldVideo.Url, fileOriginPath);
+                    videoToAdd.Update(oldDocument.Url, fileOriginPath);
                 }
                 catch (Exception err)
                 {
@@ -159,9 +160,9 @@ namespace Proyecto_Final_de_Fisica.Frms.VideosAdmin
 
             if (fileName != "" && fileOriginPath != "")
             {
-                Video videoToAdd = new Video
+                DatabaseClass.Document videoToAdd = new DatabaseClass.Document
                 {
-                    Tittle = KtextTittle.Value,
+                    Title = KtextTittle.Value,
                     Url = fileName
                 };
 

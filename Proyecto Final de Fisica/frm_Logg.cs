@@ -1,14 +1,6 @@
 ﻿using Proyecto_Final_de_Fisica.DatabaseClass;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Proyecto_Final_de_Fisica.Frms;
 using fruslib;
 using Proyecto_Final_de_Fisica.Settings;
 using System.IO;
@@ -28,9 +20,6 @@ namespace Proyecto_Final_de_Fisica
 
             ReadSettings();
             CreateDatabase();
-
-
-
         }
 
 
@@ -40,8 +29,11 @@ namespace Proyecto_Final_de_Fisica
             {
                 string UserId = TextId.Value;
                 string UserPassword = TextPassword.Value;
+                //MessageBox.Show("User: " + UserId + " Pass: " + UserPassword);
 
                 User accesUser = new User(UserId);
+
+
                 if (accesUser.VerifyPassword(UserPassword))
                 {
                     MainForm homeForm = new MainForm(accesUser, this);
@@ -67,9 +59,9 @@ namespace Proyecto_Final_de_Fisica
                     //new MessageForm(2, "La contraseña no es correcta.");
                 }
             }
-            catch (Exception err)
+            catch (Exception _)
             {
-                MessageBox.Show(err.Message);
+                //MessageBox.Show(err.Message);
                 //new MessageForm(1, error.Message);
                 TextId.IsWrong();
             }
@@ -118,11 +110,13 @@ namespace Proyecto_Final_de_Fisica
                     var temporal = SqliteHelper.LlenarDataSet(databasePath, "SELECT * FROM users").Tables[0];
                     if (temporal.Rows.Count == 0)
                     {
-                        User adminUser = new User();
-                        adminUser.Ci = "00000000000";
-                        adminUser.Name = "Admin";
-                        adminUser.Password = Cipher.CesarCifrar("admin", 5);
-                        adminUser.Level = 1;
+                        User adminUser = new User
+                        {
+                            Ci = "00000000000",
+                            Name = "Admin",
+                            Password = Cipher.CesarCifrar("admin", 5),
+                            Level = 1
+                        };
 
                         adminUser.Insert();
 

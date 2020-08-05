@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using fruslib;
 using Proyecto_Final_de_Fisica.DatabaseClass;
@@ -125,6 +119,9 @@ namespace Proyecto_Final_de_Fisica.Forms_Display.Questionaire
                 Qst2.Value = currentQuestion.ArrayOfPosiblesQuestions[1];
                 Qst3.Value = currentQuestion.ArrayOfPosiblesQuestions[2];
                 Qst4.Value = currentQuestion.ArrayOfPosiblesQuestions[3];
+
+                CurrentQuestionaire.Points = correct * 10;
+
             }
         }
 
@@ -171,7 +168,7 @@ namespace Proyecto_Final_de_Fisica.Forms_Display.Questionaire
 
         private void ButtonVerify_Click(object sender, EventArgs e)
         {
-            if(GetSelectedCheck() != -1)
+            if (GetSelectedCheck() != -1)
             {
                 Verify();
             }
@@ -202,15 +199,15 @@ namespace Proyecto_Final_de_Fisica.Forms_Display.Questionaire
                 if ((index + 2) <= QuestionNumber) buttonVerify.Text = "Siguiente";
                 else buttonVerify.Text = "Finalizar";
             }
-            else if(buttonVerify.Text == "Siguiente")
+            else if (buttonVerify.Text == "Siguiente")
             {
                 if ((index + 1) <= QuestionNumber)
                 {
                     buttonVerify.Text = "Verificar";
                     NextQuestion();
                 }
-                
-                if(index + 1 == QuestionNumber)
+
+                if (index + 1 == QuestionNumber)
                 {
                     buttonVerify.Text = "Verificar";
                     PrepareAll();
@@ -222,7 +219,7 @@ namespace Proyecto_Final_de_Fisica.Forms_Display.Questionaire
                 try
                 {
                     CurrentQuestionaire.Insert();
-                    FinishForm= new QuestionFinish(this);
+                    FinishForm = new QuestionFinish(this);
                     MostUsed.OpenFormInPanel(FinishForm, FatherForm.FatherForm.pnl_FormContainer);
                 }
                 catch (Exception)

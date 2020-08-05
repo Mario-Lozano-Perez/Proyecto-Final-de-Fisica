@@ -22,7 +22,8 @@ namespace Proyecto_Final_de_Fisica
             Con.Open();
             SQLiteDataAdapter DP = new SQLiteDataAdapter(CMD, Con);
             DP.Fill(DS);
-
+            Con.Close();
+            Con.Dispose();
             return DS;
         }
         #endregion
@@ -37,6 +38,7 @@ namespace Proyecto_Final_de_Fisica
             Comando.CommandText = CMD;
             Comando.ExecuteNonQuery();
             Con.Close();
+            Con.Dispose();
 
         }
         #endregion
