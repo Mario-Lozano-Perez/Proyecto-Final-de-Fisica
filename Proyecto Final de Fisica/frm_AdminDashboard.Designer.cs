@@ -66,11 +66,12 @@
             this.btn_usersList.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(181)))), ((int)(((byte)(113)))));
             this.btn_usersList.IconSize = 50;
             this.btn_usersList.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_usersList.Location = new System.Drawing.Point(111, 67);
+            this.btn_usersList.Location = new System.Drawing.Point(83, 54);
+            this.btn_usersList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_usersList.Name = "btn_usersList";
-            this.btn_usersList.Padding = new System.Windows.Forms.Padding(15);
+            this.btn_usersList.Padding = new System.Windows.Forms.Padding(11, 12, 11, 12);
             this.btn_usersList.Rotation = 0D;
-            this.btn_usersList.Size = new System.Drawing.Size(154, 147);
+            this.btn_usersList.Size = new System.Drawing.Size(116, 119);
             this.btn_usersList.TabIndex = 6;
             this.btn_usersList.Text = "Usuarios";
             this.btn_usersList.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -91,11 +92,12 @@
             this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(185)))), ((int)(((byte)(172)))));
             this.iconButton1.IconSize = 50;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.iconButton1.Location = new System.Drawing.Point(329, 67);
+            this.iconButton1.Location = new System.Drawing.Point(247, 54);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Padding = new System.Windows.Forms.Padding(15);
+            this.iconButton1.Padding = new System.Windows.Forms.Padding(11, 12, 11, 12);
             this.iconButton1.Rotation = 0D;
-            this.iconButton1.Size = new System.Drawing.Size(154, 147);
+            this.iconButton1.Size = new System.Drawing.Size(116, 119);
             this.iconButton1.TabIndex = 7;
             this.iconButton1.Text = "Preguntas";
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -116,11 +118,12 @@
             this.btn_Videos.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(107)))), ((int)(((byte)(124)))));
             this.btn_Videos.IconSize = 50;
             this.btn_Videos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_Videos.Location = new System.Drawing.Point(553, 67);
+            this.btn_Videos.Location = new System.Drawing.Point(415, 54);
+            this.btn_Videos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Videos.Name = "btn_Videos";
-            this.btn_Videos.Padding = new System.Windows.Forms.Padding(15);
+            this.btn_Videos.Padding = new System.Windows.Forms.Padding(11, 12, 11, 12);
             this.btn_Videos.Rotation = 0D;
-            this.btn_Videos.Size = new System.Drawing.Size(154, 147);
+            this.btn_Videos.Size = new System.Drawing.Size(116, 119);
             this.btn_Videos.TabIndex = 8;
             this.btn_Videos.Text = "Videos";
             this.btn_Videos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -141,10 +144,11 @@
             this.btn_Reload.IconChar = FontAwesome.Sharp.IconChar.Redo;
             this.btn_Reload.IconColor = System.Drawing.Color.Gray;
             this.btn_Reload.IconSize = 23;
-            this.btn_Reload.Location = new System.Drawing.Point(771, 0);
+            this.btn_Reload.Location = new System.Drawing.Point(578, 0);
+            this.btn_Reload.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Reload.Name = "btn_Reload";
             this.btn_Reload.Rotation = 0D;
-            this.btn_Reload.Size = new System.Drawing.Size(42, 42);
+            this.btn_Reload.Size = new System.Drawing.Size(32, 34);
             this.btn_Reload.TabIndex = 9;
             this.btn_Reload.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Reload.UseVisualStyleBackColor = false;
@@ -156,10 +160,11 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(181)))), ((int)(((byte)(113)))));
-            this.panel1.Location = new System.Drawing.Point(111, 260);
+            this.panel1.Location = new System.Drawing.Point(83, 211);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(4);
-            this.panel1.Size = new System.Drawing.Size(821, 268);
+            this.panel1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.panel1.Size = new System.Drawing.Size(616, 218);
             this.panel1.TabIndex = 10;
             // 
             // panel3
@@ -175,9 +180,10 @@
             this.panel3.Controls.Add(this.LabelQuestionairesAmount);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(4, 46);
+            this.panel3.Location = new System.Drawing.Point(3, 37);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(813, 218);
+            this.panel3.Size = new System.Drawing.Size(610, 178);
             this.panel3.TabIndex = 16;
             // 
             // label3
@@ -185,9 +191,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label3.Location = new System.Drawing.Point(20, 96);
+            this.label3.Location = new System.Drawing.Point(15, 78);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(225, 25);
+            this.label3.Size = new System.Drawing.Size(177, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Cuestionarios Realizados:";
             // 
@@ -197,9 +204,10 @@
             this.LabelQuestionsAmount.BackColor = System.Drawing.Color.Transparent;
             this.LabelQuestionsAmount.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.LabelQuestionsAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(243)))), ((int)(((byte)(203)))));
-            this.LabelQuestionsAmount.Location = new System.Drawing.Point(484, 167);
+            this.LabelQuestionsAmount.Location = new System.Drawing.Point(363, 136);
+            this.LabelQuestionsAmount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LabelQuestionsAmount.Name = "LabelQuestionsAmount";
-            this.LabelQuestionsAmount.Size = new System.Drawing.Size(22, 25);
+            this.LabelQuestionsAmount.Size = new System.Drawing.Size(17, 20);
             this.LabelQuestionsAmount.TabIndex = 14;
             this.LabelQuestionsAmount.Text = "0";
             // 
@@ -208,9 +216,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label4.Location = new System.Drawing.Point(20, 27);
+            this.label4.Location = new System.Drawing.Point(15, 22);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(277, 25);
+            this.label4.Size = new System.Drawing.Size(213, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "Usuario con Mayor Puntuación:";
             // 
@@ -220,9 +229,10 @@
             this.lbl_UserCount.BackColor = System.Drawing.Color.Transparent;
             this.lbl_UserCount.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.lbl_UserCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(243)))), ((int)(((byte)(203)))));
-            this.lbl_UserCount.Location = new System.Drawing.Point(115, 167);
+            this.lbl_UserCount.Location = new System.Drawing.Point(86, 136);
+            this.lbl_UserCount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_UserCount.Name = "lbl_UserCount";
-            this.lbl_UserCount.Size = new System.Drawing.Size(22, 25);
+            this.lbl_UserCount.Size = new System.Drawing.Size(17, 20);
             this.lbl_UserCount.TabIndex = 4;
             this.lbl_UserCount.Text = "0";
             // 
@@ -231,9 +241,10 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label8.Location = new System.Drawing.Point(377, 167);
+            this.label8.Location = new System.Drawing.Point(283, 136);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(101, 25);
+            this.label8.Size = new System.Drawing.Size(77, 20);
             this.label8.TabIndex = 13;
             this.label8.Text = "Preguntas:";
             // 
@@ -242,9 +253,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label2.Location = new System.Drawing.Point(20, 167);
+            this.label2.Location = new System.Drawing.Point(15, 136);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 25);
+            this.label2.Size = new System.Drawing.Size(68, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Usuarios:";
             // 
@@ -254,9 +266,10 @@
             this.LabelVideosAmount.BackColor = System.Drawing.Color.Transparent;
             this.LabelVideosAmount.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.LabelVideosAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(243)))), ((int)(((byte)(203)))));
-            this.LabelVideosAmount.Location = new System.Drawing.Point(286, 167);
+            this.LabelVideosAmount.Location = new System.Drawing.Point(214, 136);
+            this.LabelVideosAmount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LabelVideosAmount.Name = "LabelVideosAmount";
-            this.LabelVideosAmount.Size = new System.Drawing.Size(22, 25);
+            this.LabelVideosAmount.Size = new System.Drawing.Size(17, 20);
             this.LabelVideosAmount.TabIndex = 12;
             this.LabelVideosAmount.Text = "0";
             // 
@@ -266,9 +279,10 @@
             this.LabelTopUser.BackColor = System.Drawing.Color.Transparent;
             this.LabelTopUser.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.LabelTopUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(243)))), ((int)(((byte)(203)))));
-            this.LabelTopUser.Location = new System.Drawing.Point(300, 27);
+            this.LabelTopUser.Location = new System.Drawing.Point(225, 22);
+            this.LabelTopUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LabelTopUser.Name = "LabelTopUser";
-            this.LabelTopUser.Size = new System.Drawing.Size(22, 25);
+            this.LabelTopUser.Size = new System.Drawing.Size(17, 20);
             this.LabelTopUser.TabIndex = 5;
             this.LabelTopUser.Text = "0";
             // 
@@ -278,9 +292,10 @@
             this.LabelQuestionairesAmount.BackColor = System.Drawing.Color.Transparent;
             this.LabelQuestionairesAmount.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.LabelQuestionairesAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(243)))), ((int)(((byte)(203)))));
-            this.LabelQuestionairesAmount.Location = new System.Drawing.Point(247, 96);
+            this.LabelQuestionairesAmount.Location = new System.Drawing.Point(195, 78);
+            this.LabelQuestionairesAmount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LabelQuestionairesAmount.Name = "LabelQuestionairesAmount";
-            this.LabelQuestionairesAmount.Size = new System.Drawing.Size(22, 25);
+            this.LabelQuestionairesAmount.Size = new System.Drawing.Size(17, 20);
             this.LabelQuestionairesAmount.TabIndex = 10;
             this.LabelQuestionairesAmount.Text = "0";
             // 
@@ -289,9 +304,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label6.Location = new System.Drawing.Point(207, 167);
+            this.label6.Location = new System.Drawing.Point(155, 136);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 25);
+            this.label6.Size = new System.Drawing.Size(57, 20);
             this.label6.TabIndex = 11;
             this.label6.Text = "Videos:";
             // 
@@ -301,9 +317,10 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.btn_Reload);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(4, 4);
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(813, 42);
+            this.panel2.Size = new System.Drawing.Size(610, 34);
             this.panel2.TabIndex = 15;
             // 
             // label1
@@ -312,9 +329,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(243)))), ((int)(((byte)(203)))));
-            this.label1.Location = new System.Drawing.Point(16, 6);
+            this.label1.Location = new System.Drawing.Point(12, 5);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 28);
+            this.label1.Size = new System.Drawing.Size(75, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Resumen";
             // 
@@ -332,11 +350,12 @@
             this.btn_Documents.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btn_Documents.IconSize = 50;
             this.btn_Documents.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_Documents.Location = new System.Drawing.Point(778, 67);
+            this.btn_Documents.Location = new System.Drawing.Point(584, 54);
+            this.btn_Documents.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Documents.Name = "btn_Documents";
-            this.btn_Documents.Padding = new System.Windows.Forms.Padding(10, 15, 10, 15);
+            this.btn_Documents.Padding = new System.Windows.Forms.Padding(4, 12, 4, 12);
             this.btn_Documents.Rotation = 0D;
-            this.btn_Documents.Size = new System.Drawing.Size(154, 147);
+            this.btn_Documents.Size = new System.Drawing.Size(116, 119);
             this.btn_Documents.TabIndex = 11;
             this.btn_Documents.Text = "Documentos";
             this.btn_Documents.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -345,16 +364,17 @@
             // 
             // frm_AdminDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(34)))), ((int)(((byte)(39)))));
-            this.ClientSize = new System.Drawing.Size(1042, 594);
+            this.ClientSize = new System.Drawing.Size(782, 483);
             this.Controls.Add(this.btn_Documents);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_Videos);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.btn_usersList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frm_AdminDashboard";
             this.Text = "frm_AdminDashboard";
             this.panel1.ResumeLayout(false);

@@ -27,5 +27,10 @@ namespace Proyecto_Final_de_Fisica
         {
             MostUsed.ExecuteShellUrl(Properties.Resources.GitHubLink);
         }
+
+        private void TabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

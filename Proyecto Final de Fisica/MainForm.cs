@@ -124,5 +124,16 @@ namespace Proyecto_Final_de_Fisica
         {
             MostUsed.OpenFormInPanel(DOCUMENTS_FORM, pnl_FormContainer);
         }
+
+        private void IconMenuItem4_Click(object sender, EventArgs e)
+        {
+            MostUsed.OpenFormInPanel(DOCUMENTS_FORM, pnl_FormContainer);
+        }
+
+        private void IconMenuItem5_Click(object sender, EventArgs e)
+        {
+            About info = new About();
+            info.Show();
+        }
     }
 }

@@ -176,7 +176,7 @@
             this.iconMenuItem8});
             this.Context.Name = "contextMenuStrip2";
             this.Context.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.Context.Size = new System.Drawing.Size(170, 218);
+            this.Context.Size = new System.Drawing.Size(215, 246);
             // 
             // iconMenuItem1
             // 
@@ -187,7 +187,7 @@
             this.iconMenuItem1.IconSize = 16;
             this.iconMenuItem1.Name = "iconMenuItem1";
             this.iconMenuItem1.Rotation = 0D;
-            this.iconMenuItem1.Size = new System.Drawing.Size(169, 26);
+            this.iconMenuItem1.Size = new System.Drawing.Size(214, 26);
             this.iconMenuItem1.Text = "Inicio";
             this.iconMenuItem1.Click += new System.EventHandler(this.Btn_Home_Click);
             // 
@@ -200,7 +200,7 @@
             this.iconMenuItem2.IconSize = 16;
             this.iconMenuItem2.Name = "iconMenuItem2";
             this.iconMenuItem2.Rotation = 0D;
-            this.iconMenuItem2.Size = new System.Drawing.Size(169, 26);
+            this.iconMenuItem2.Size = new System.Drawing.Size(214, 26);
             this.iconMenuItem2.Text = "Videos";
             this.iconMenuItem2.Click += new System.EventHandler(this.ButtonVideos_Click);
             // 
@@ -213,7 +213,7 @@
             this.iconMenuItem3.IconSize = 16;
             this.iconMenuItem3.Name = "iconMenuItem3";
             this.iconMenuItem3.Rotation = 0D;
-            this.iconMenuItem3.Size = new System.Drawing.Size(169, 26);
+            this.iconMenuItem3.Size = new System.Drawing.Size(214, 26);
             this.iconMenuItem3.Text = "Cuestionario";
             this.iconMenuItem3.Click += new System.EventHandler(this.ButtonQuestionaire_Click);
             // 
@@ -222,18 +222,19 @@
             this.iconMenuItem4.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.iconMenuItem4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.iconMenuItem4.IconChar = FontAwesome.Sharp.IconChar.Book;
-            this.iconMenuItem4.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.iconMenuItem4.IconColor = System.Drawing.Color.PapayaWhip;
             this.iconMenuItem4.IconSize = 16;
             this.iconMenuItem4.Name = "iconMenuItem4";
             this.iconMenuItem4.Rotation = 0D;
-            this.iconMenuItem4.Size = new System.Drawing.Size(169, 26);
+            this.iconMenuItem4.Size = new System.Drawing.Size(214, 26);
             this.iconMenuItem4.Text = "Documentos";
+            this.iconMenuItem4.Click += new System.EventHandler(this.IconMenuItem4_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(166, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(211, 6);
             // 
             // iconMenuItem5
             // 
@@ -244,8 +245,9 @@
             this.iconMenuItem5.IconSize = 16;
             this.iconMenuItem5.Name = "iconMenuItem5";
             this.iconMenuItem5.Rotation = 0D;
-            this.iconMenuItem5.Size = new System.Drawing.Size(169, 26);
+            this.iconMenuItem5.Size = new System.Drawing.Size(214, 26);
             this.iconMenuItem5.Text = "Acerca de";
+            this.iconMenuItem5.Click += new System.EventHandler(this.IconMenuItem5_Click);
             // 
             // iconMenuItem6
             // 
@@ -256,7 +258,7 @@
             this.iconMenuItem6.IconSize = 16;
             this.iconMenuItem6.Name = "iconMenuItem6";
             this.iconMenuItem6.Rotation = 0D;
-            this.iconMenuItem6.Size = new System.Drawing.Size(169, 26);
+            this.iconMenuItem6.Size = new System.Drawing.Size(214, 26);
             this.iconMenuItem6.Text = "Cerrar Sesión";
             this.iconMenuItem6.Click += new System.EventHandler(this.LogOut);
             // 
@@ -269,7 +271,7 @@
             this.iconMenuItem7.IconSize = 16;
             this.iconMenuItem7.Name = "iconMenuItem7";
             this.iconMenuItem7.Rotation = 0D;
-            this.iconMenuItem7.Size = new System.Drawing.Size(169, 26);
+            this.iconMenuItem7.Size = new System.Drawing.Size(214, 26);
             this.iconMenuItem7.Text = "Minimizar";
             this.iconMenuItem7.Click += new System.EventHandler(this.MinimizeProgram);
             // 
@@ -282,7 +284,7 @@
             this.iconMenuItem8.IconSize = 16;
             this.iconMenuItem8.Name = "iconMenuItem8";
             this.iconMenuItem8.Rotation = 0D;
-            this.iconMenuItem8.Size = new System.Drawing.Size(169, 26);
+            this.iconMenuItem8.Size = new System.Drawing.Size(214, 26);
             this.iconMenuItem8.Text = "Salir";
             this.iconMenuItem8.Click += new System.EventHandler(this.ExitProgram);
             // 

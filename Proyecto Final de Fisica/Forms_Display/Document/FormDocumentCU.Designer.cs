@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDocumentCU));
             this.panel1 = new System.Windows.Forms.Panel();
             this.PanelFileChecked = new System.Windows.Forms.Panel();
             this.LabelProcces = new System.Windows.Forms.Label();
@@ -198,10 +199,11 @@
             this.ClientSize = new System.Drawing.Size(376, 244);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormDocumentCU";
             this.Padding = new System.Windows.Forms.Padding(3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormDocumentCU";
+            this.Text = "Documentos";
             this.TopMost = true;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
