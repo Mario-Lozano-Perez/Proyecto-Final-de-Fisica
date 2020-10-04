@@ -36,6 +36,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.btn_Search = new FontAwesome.Sharp.IconButton();
             this.VideoPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.prueba1 = new Proyecto_Final_de_Fisica.Prueba();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -142,12 +143,22 @@
             // 
             this.VideoPanel.AutoScroll = true;
             this.VideoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            //this.VideoPanel.Controls.Add(this.prueba1);
+            this.VideoPanel.Controls.Add(this.prueba1);
             this.VideoPanel.Location = new System.Drawing.Point(35, 91);
             this.VideoPanel.Name = "VideoPanel";
             this.VideoPanel.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.VideoPanel.Size = new System.Drawing.Size(973, 477);
             this.VideoPanel.TabIndex = 10;
+            // 
+            // prueba1
+            // 
+            this.prueba1.BackColor = System.Drawing.Color.Yellow;
+            this.prueba1.Backg = System.Drawing.Color.Yellow;
+            this.prueba1.Location = new System.Drawing.Point(3, 8);
+            this.prueba1.Name = "prueba1";
+            this.prueba1.Size = new System.Drawing.Size(345, 151);
+            this.prueba1.TabIndex = 0;
+            this.prueba1.Value = "Puta";
             // 
             // FormViewVideos
             // 
@@ -181,5 +192,6 @@
         private System.Windows.Forms.Panel panel4;
         private FontAwesome.Sharp.IconButton btn_Search;
         private System.Windows.Forms.FlowLayoutPanel VideoPanel;
+        private Prueba prueba1;
     }
 }
