@@ -247,12 +247,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Prueba.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Prueba.Designer.cs">
-      <DependentUpon>Prueba.cs</DependentUpon>
-    </Compile>
     <Compile Include="Settings\Settings.cs" />
     <Compile Include="Settings\UserSettings.cs" />
     <Compile Include="Settings\UserSettingsLoader.cs" />
@@ -330,9 +324,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUsserDashBoard.resx">
       <DependentUpon>FormUsserDashBoard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Prueba.resx">
-      <DependentUpon>Prueba.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
