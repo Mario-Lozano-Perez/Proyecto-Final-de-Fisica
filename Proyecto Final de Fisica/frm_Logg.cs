@@ -107,29 +107,45 @@ namespace Proyecto_Final_de_Fisica
                     //string QueryMax = MostUsed.ReadFile(Properties.Resources.SQL_BUILDER);
                     SqliteHelper.Ejecutar_CMD(databasePath, Properties.Resources.SQL_BUILDER);
 
-                    var temporal = SqliteHelper.LlenarDataSet(databasePath, "SELECT * FROM users").Tables[0];
-                    if (temporal.Rows.Count == 0)
-                    {
-                        User adminUser = new User
-                        {
-                            Ci = "00000000000",
-                            Name = "Admin",
-                            Password = Cipher.CesarCifrar("admin", 5),
-                            Level = 1
-                        };
-
-                        adminUser.Insert();
-
-                        MessageBox.Show(
-                            "Se ha creado el usuario administrador:\nCi: 00000000000\nContraseña: admin",
-                            "Usuario Administrador Creado",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                    CreateAdminUser(databasePath);
                 }
                 catch (Exception err)
                 {
                     MessageBox.Show("Ha ocurrido un error mientras se cargaba la base de datos.\n" + err.Message);
                 }
+            }
+            else
+            {
+                try
+                {
+                    CreateAdminUser(databasePath);
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show("Ha ocurrido un error mientras se cargaba la base de datos.\n" + err.Message);
+                }
+            }
+        }
+
+        private void CreateAdminUser(string databasePath)
+        {
+            var temporal = SqliteHelper.LlenarDataSet(databasePath, "SELECT * FROM users").Tables[0];
+            if (temporal.Rows.Count == 0)
+            {
+                User adminUser = new User
+                {
+                    Ci = "00000000000",
+                    Name = "Admin",
+                    Password = Cipher.CesarCifrar("admin", 5),
+                    Level = 1
+                };
+
+                adminUser.Insert();
+
+                MessageBox.Show(
+                    "Se ha creado el usuario administrador:\nCi: 00000000000\nContraseña: admin",
+                    "Usuario Administrador Creado",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
