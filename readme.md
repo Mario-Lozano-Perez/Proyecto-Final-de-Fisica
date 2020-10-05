@@ -33,3 +33,7 @@ Por defecto al abrir la aplicación se creará una carpeta en **mis documentos**
 >
 > **ID: 00000000000**  
 > **Contraseña: admin**
+
+## Dependencias
+
+Este proyecto utiliza la libreria **Fruslib** que podrán encontrar [aquí](https://github.com/Mario-Lozano-Perez/fruslib.git).
